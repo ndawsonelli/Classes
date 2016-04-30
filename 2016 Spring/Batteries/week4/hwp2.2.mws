@@ -1,0 +1,153 @@
+{VERSION 6 0 "IBM INTEL NT" "6.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{CSTYLE "2D Math" -1 2 "Times" 0 1 0 0 0 0 0 0 2 0 0 0 0 
+0 0 1 }{CSTYLE "2D Output" 2 20 "" 0 1 0 0 255 1 0 0 0 0 0 0 0 0 0 1 }
+{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 
+2 2 1 1 1 1 }1 1 0 0 0 0 1 0 1 0 2 2 0 1 }{PSTYLE "Maple Output" -1 
+11 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 1 1 1 }3 3 0 
+0 0 0 1 0 1 0 2 2 0 1 }{PSTYLE "Maple Output" -1 12 1 {CSTYLE "" -1 
+-1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 1 1 1 }1 3 0 0 0 0 1 0 1 0 2 2 
+0 1 }}
+{SECT 0 {EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 43 "############## P1.1 \+
+##############\nrestart:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 11 
+"Digits:=15;" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%'DigitsG\"#:" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 6 "N:=10;" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>%\"NG\"#5" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+25 "eq[0]:=u[1](t)-u[0](t)=0;" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>&%#e
+qG6#\"\"!/,&-&%\"uG6#\"\"\"6#%\"tGF.-&F,F&F/!\"\"F'" }}}{EXCHG {PARA 
+0 "> " 0 "" {MPLTEXT 1 0 11 "h:=1/(N+1):" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 83 "for i from 1 to N do eq[i]:=diff(u[i](t),t)=(u[i-1](t
+)-2*u[i](t)+u[i+1](t))/h^2;od;" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>&%#
+eqG6#\"\"\"/-%%diffG6$-&%\"uGF&6#%\"tGF0,(*&\"$@\"F'-&F.6#\"\"!F/F'F'*
+&\"$U#F'F,F'!\"\"*&F3F'-&F.6#\"\"#F/F'F'" }}{PARA 11 "" 1 "" {XPPMATH 
+20 "6#>&%#eqG6#\"\"#/-%%diffG6$-&%\"uGF&6#%\"tGF0,(*&\"$@\"\"\"\"-&F.6
+#F4F/F4F4*&\"$U#F4F,F4!\"\"*&F3F4-&F.6#\"\"$F/F4F4" }}{PARA 11 "" 1 "
+" {XPPMATH 20 "6#>&%#eqG6#\"\"$/-%%diffG6$-&%\"uGF&6#%\"tGF0,(*&\"$@\"
+\"\"\"-&F.6#\"\"#F/F4F4*&\"$U#F4F,F4!\"\"*&F3F4-&F.6#\"\"%F/F4F4" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#>&%#eqG6#\"\"%/-%%diffG6$-&%\"uGF&6#%
+\"tGF0,(*&\"$@\"\"\"\"-&F.6#\"\"$F/F4F4*&\"$U#F4F,F4!\"\"*&F3F4-&F.6#
+\"\"&F/F4F4" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>&%#eqG6#\"\"&/-%%diffG
+6$-&%\"uGF&6#%\"tGF0,(*&\"$@\"\"\"\"-&F.6#\"\"%F/F4F4*&\"$U#F4F,F4!\"
+\"*&F3F4-&F.6#\"\"'F/F4F4" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>&%#eqG6#
+\"\"'/-%%diffG6$-&%\"uGF&6#%\"tGF0,(*&\"$@\"\"\"\"-&F.6#\"\"&F/F4F4*&
+\"$U#F4F,F4!\"\"*&F3F4-&F.6#\"\"(F/F4F4" }}{PARA 11 "" 1 "" {XPPMATH 
+20 "6#>&%#eqG6#\"\"(/-%%diffG6$-&%\"uGF&6#%\"tGF0,(*&\"$@\"\"\"\"-&F.6
+#\"\"'F/F4F4*&\"$U#F4F,F4!\"\"*&F3F4-&F.6#\"\")F/F4F4" }}{PARA 11 "" 
+1 "" {XPPMATH 20 "6#>&%#eqG6#\"\")/-%%diffG6$-&%\"uGF&6#%\"tGF0,(*&\"$
+@\"\"\"\"-&F.6#\"\"(F/F4F4*&\"$U#F4F,F4!\"\"*&F3F4-&F.6#\"\"*F/F4F4" }
+}{PARA 11 "" 1 "" {XPPMATH 20 "6#>&%#eqG6#\"\"*/-%%diffG6$-&%\"uGF&6#%
+\"tGF0,(*&\"$@\"\"\"\"-&F.6#\"\")F/F4F4*&\"$U#F4F,F4!\"\"*&F3F4-&F.6#
+\"#5F/F4F4" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>&%#eqG6#\"#5/-%%diffG6$
+-&%\"uGF&6#%\"tGF0,(*&\"$@\"\"\"\"-&F.6#\"\"*F/F4F4*&\"$U#F4F,F4!\"\"*
+&F3F4-&F.6#\"#6F/F4F4" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 40 "eq
+[N+1]:=u[N+1](t)=0.01+0.005*sin(Pi*t);" }}{PARA 11 "" 1 "" {XPPMATH 
+20 "6#>&%#eqG6#\"#6/-&%\"uGF&6#%\"tG,&$\"\"\"!\"#F0*&$\"\"&!\"$F0-%$si
+nG6#*&%#PiGF0F-F0F0F0" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 29 "ic
+s:=seq(u[i](0)=1,i=0..N+1);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%$icsG
+6./-&%\"uG6#\"\"!F*\"\"\"/-&F)6#F,F*F,/-&F)6#\"\"#F*F,/-&F)6#\"\"$F*F,
+/-&F)6#\"\"%F*F,/-&F)6#\"\"&F*F,/-&F)6#\"\"'F*F,/-&F)6#\"\"(F*F,/-&F)6
+#\"\")F*F,/-&F)6#\"\"*F*F,/-&F)6#\"#5F*F,/-&F)6#\"#6F*F," }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 25 "Eqs:=seq(eq[i],i=0..N+1);" }}{PARA 
+12 "" 1 "" {XPPMATH 20 "6#>%$EqsG6./,&-&%\"uG6#\"\"\"6#%\"tGF,-&F*6#\"
+\"!F-!\"\"F2/-%%diffG6$F(F.,(*&\"$@\"F,F/F,F,*&\"$U#F,F(F,F3*&F:F,-&F*
+6#\"\"#F-F,F,/-F66$F>F.,(*&F:F,F(F,F,*&F<F,F>F,F3*&F:F,-&F*6#\"\"$F-F,
+F,/-F66$FIF.,(*&F:F,F>F,F,*&F<F,FIF,F3*&F:F,-&F*6#\"\"%F-F,F,/-F66$FTF
+.,(*&F:F,FIF,F,*&F<F,FTF,F3*&F:F,-&F*6#\"\"&F-F,F,/-F66$FinF.,(*&F:F,F
+TF,F,*&F<F,FinF,F3*&F:F,-&F*6#\"\"'F-F,F,/-F66$FdoF.,(*&F:F,FinF,F,*&F
+<F,FdoF,F3*&F:F,-&F*6#\"\"(F-F,F,/-F66$F_pF.,(*&F:F,FdoF,F,*&F<F,F_pF,
+F3*&F:F,-&F*6#\"\")F-F,F,/-F66$FjpF.,(*&F:F,F_pF,F,*&F<F,FjpF,F3*&F:F,
+-&F*6#\"\"*F-F,F,/-F66$FeqF.,(*&F:F,FjpF,F,*&F<F,FeqF,F3*&F:F,-&F*6#\"
+#5F-F,F,/-F66$F`rF.,(*&F:F,FeqF,F,*&F<F,F`rF,F3*&F:F,-&F*6#\"#6F-F,F,/
+F[s,&$F,!\"#F,*&$F\\o!\"$F,-%$sinG6#*&%#PiGF,F.F,F,F," }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 18 "infolevel[all]:=0;" }}{PARA 11 "" 
+1 "" {XPPMATH 20 "6#>&%*infolevelG6#%$allG\"\"!" }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 114 "eq[N+1]:=u[N+1](t)=0.01+0.005*sin(Pi*t):\nEqs
+:=seq(eq[i],i=0..N+1):\nsol:=dsolve(\{Eqs,ics\},type=numeric,stiff=tru
+e):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 28 "infolevel[all]:=0;\n
+#sol(.5);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>&%*infolevelG6#%$allG\"
+\"!" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 12 "with(plots):" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 35 "P1:=odeplot(sol,[t,u[10](t)]
+,0..1):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 49 "eq[N+1]:=u[N+1](
+t)=0.5;\nEqs:=seq(eq[i],i=0..N+1);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#
+>&%#eqG6#\"#6/-&%\"uGF&6#%\"tG$\"\"&!\"\"" }}{PARA 12 "" 1 "" 
+{XPPMATH 20 "6#>%$EqsG6./,&-&%\"uG6#\"\"\"6#%\"tGF,-&F*6#\"\"!F-!\"\"F
+2/-%%diffG6$F(F.,(*&\"$@\"F,F/F,F,*&\"$U#F,F(F,F3*&F:F,-&F*6#\"\"#F-F,
+F,/-F66$F>F.,(*&F:F,F(F,F,*&F<F,F>F,F3*&F:F,-&F*6#\"\"$F-F,F,/-F66$FIF
+.,(*&F:F,F>F,F,*&F<F,FIF,F3*&F:F,-&F*6#\"\"%F-F,F,/-F66$FTF.,(*&F:F,FI
+F,F,*&F<F,FTF,F3*&F:F,-&F*6#\"\"&F-F,F,/-F66$FinF.,(*&F:F,FTF,F,*&F<F,
+FinF,F3*&F:F,-&F*6#\"\"'F-F,F,/-F66$FdoF.,(*&F:F,FinF,F,*&F<F,FdoF,F3*
+&F:F,-&F*6#\"\"(F-F,F,/-F66$F_pF.,(*&F:F,FdoF,F,*&F<F,F_pF,F3*&F:F,-&F
+*6#\"\")F-F,F,/-F66$FjpF.,(*&F:F,F_pF,F,*&F<F,FjpF,F3*&F:F,-&F*6#\"\"*
+F-F,F,/-F66$FeqF.,(*&F:F,FjpF,F,*&F<F,FeqF,F3*&F:F,-&F*6#\"#5F-F,F,/-F
+66$F`rF.,(*&F:F,FeqF,F,*&F<F,F`rF,F3*&F:F,-&F*6#\"#6F-F,F,/F[s$F\\oF3
+" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 284 "sol1:=dsolve(\{Eqs,ics
+\},type=numeric,stiff=true,events=[[t=0.5,[u[N+1](t)=0.01]]],range=0..
+1);\n#eq[0]:=u[0](t)=sol1(0.1);\n#eq[N+1]:=u[N+1](t)=0.01;\n#Eqs:=seq(
+eq[i],i=0..N+1);\n#sol12:=dsolve(\{Eqs,ics\},type=numeric,stiff=true,e
+vents=[[t=0.5,[u[N+1](t)=0.01]]],range=0.5..1);\nwith(plots):" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 258 "P2:=odeplot(sol1,[t,u[10](t)],0..1
+):\n#odeplot(sol12,[t,u[10](t)],0.5..1);\neq[N+1]:=u[N+1](t)=0.9-0.89*
+t;\nEqs:=seq(eq[i],i=0..N+1);\nsol2:=dsolve(\{Eqs,ics\},type=numeric,s
+tiff=true,range=0..1):\n#sol2(0.5);\nP3:=odeplot(sol2,[t,u[10](t)],0..
+1):\ndisplay(P1,P2,P3);" }}{PARA 11 "" 1 "" {TEXT -1 0 "" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 8 "restart:" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 11 "Digits:=15;" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%'D
+igitsG\"#:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 6 "N:=10;" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"NG\"#5" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 25 "eq[0]:=u[1](t)-u[0](t)=0;" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>&%#eqG6#\"\"!/,&-&%\"uG6#\"\"\"6#%\"tGF.-&F,F&F/!\"\"F
+'" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 11 "h:=1/(N+1):" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 131 "for i from 1 to N do eq[i]:
+=diff(u[i](t),t)=(1-(i*h)^2)*(u[i-1](t)-2*u[i](t)+u[i+1](t))/h^2-2*(i*
+h)*(u[i+1](t)-u[i-1](t))/(2*h);od;" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#
+>&%#eqG6#\"\"\"/-%%diffG6$-&%\"uGF&6#%\"tGF0,(*&\"$@\"F'-&F.6#\"\"!F/F
+'F'*&\"$S#F'F,F'!\"\"*&\"$>\"F'-&F.6#\"\"#F/F'F'" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>&%#eqG6#\"\"#/-%%diffG6$-&%\"uGF&6#%\"tGF0,(*&\"$>\"\"
+\"\"-&F.6#F4F/F4F4*&\"$M#F4F,F4!\"\"*&\"$:\"F4-&F.6#\"\"$F/F4F4" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#>&%#eqG6#\"\"$/-%%diffG6$-&%\"uGF&6#%
+\"tGF0,(*&\"$:\"\"\"\"-&F.6#\"\"#F/F4F4*&\"$C#F4F,F4!\"\"*&\"$4\"F4-&F
+.6#\"\"%F/F4F4" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>&%#eqG6#\"\"%/-%%di
+ffG6$-&%\"uGF&6#%\"tGF0,(*&\"$4\"\"\"\"-&F.6#\"\"$F/F4F4*&\"$5#F4F,F4!
+\"\"*&\"$,\"F4-&F.6#\"\"&F/F4F4" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>&%
+#eqG6#\"\"&/-%%diffG6$-&%\"uGF&6#%\"tGF0,(*&\"$,\"\"\"\"-&F.6#\"\"%F/F
+4F4*&\"$#>F4F,F4!\"\"*&\"#\"*F4-&F.6#\"\"'F/F4F4" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>&%#eqG6#\"\"'/-%%diffG6$-&%\"uGF&6#%\"tGF0,(*&\"#\"*\"
+\"\"-&F.6#\"\"&F/F4F4*&\"$q\"F4F,F4!\"\"*&\"#zF4-&F.6#\"\"(F/F4F4" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#>&%#eqG6#\"\"(/-%%diffG6$-&%\"uGF&6#%
+\"tGF0,(*&\"#z\"\"\"-&F.6#\"\"'F/F4F4*&\"$W\"F4F,F4!\"\"*&\"#lF4-&F.6#
+\"\")F/F4F4" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>&%#eqG6#\"\")/-%%diffG
+6$-&%\"uGF&6#%\"tGF0,(*&\"#l\"\"\"-&F.6#\"\"(F/F4F4*&\"$9\"F4F,F4!\"\"
+*&\"#\\F4-&F.6#\"\"*F/F4F4" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>&%#eqG6
+#\"\"*/-%%diffG6$-&%\"uGF&6#%\"tGF0,(*&\"#\\\"\"\"-&F.6#\"\")F/F4F4*&
+\"#!)F4F,F4!\"\"*&\"#JF4-&F.6#\"#5F/F4F4" }}{PARA 11 "" 1 "" {XPPMATH 
+20 "6#>&%#eqG6#\"#5/-%%diffG6$-&%\"uGF&6#%\"tGF0,(*&\"#J\"\"\"-&F.6#\"
+\"*F/F4F4*&\"#UF4F,F4!\"\"*&\"#6F4-&F.6#F=F/F4F4" }}}{EXCHG {PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 23 "eq[N+1]:=u[N+1](t)=0.1;" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>&%#eqG6#\"#6/-&%\"uGF&6#%\"tG$\"\"\"!\"\"" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 29 "ics:=seq(u[i](0)=1,i=0..N+1);" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#>%$icsG6./-&%\"uG6#\"\"!F*\"\"\"/-&F)6
+#F,F*F,/-&F)6#\"\"#F*F,/-&F)6#\"\"$F*F,/-&F)6#\"\"%F*F,/-&F)6#\"\"&F*F
+,/-&F)6#\"\"'F*F,/-&F)6#\"\"(F*F,/-&F)6#\"\")F*F,/-&F)6#\"\"*F*F,/-&F)
+6#\"#5F*F,/-&F)6#\"#6F*F," }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+25 "Eqs:=seq(eq[i],i=0..N+1);" }}{PARA 12 "" 1 "" {XPPMATH 20 "6#>%$Eq
+sG6./,&-&%\"uG6#\"\"\"6#%\"tGF,-&F*6#\"\"!F-!\"\"F2/-%%diffG6$F(F.,(*&
+\"$@\"F,F/F,F,*&\"$S#F,F(F,F3*&\"$>\"F,-&F*6#\"\"#F-F,F,/-F66$F?F.,(*&
+F>F,F(F,F,*&\"$M#F,F?F,F3*&\"$:\"F,-&F*6#\"\"$F-F,F,/-F66$FLF.,(*&FKF,
+F?F,F,*&\"$C#F,FLF,F3*&\"$4\"F,-&F*6#\"\"%F-F,F,/-F66$FYF.,(*&FXF,FLF,
+F,*&\"$5#F,FYF,F3*&\"$,\"F,-&F*6#\"\"&F-F,F,/-F66$F`oF.,(*&F_oF,FYF,F,
+*&\"$#>F,F`oF,F3*&\"#\"*F,-&F*6#\"\"'F-F,F,/-F66$F]pF.,(*&F\\pF,F`oF,F
+,*&\"$q\"F,F]pF,F3*&\"#zF,-&F*6#\"\"(F-F,F,/-F66$FjpF.,(*&FipF,F]pF,F,
+*&\"$W\"F,FjpF,F3*&\"#lF,-&F*6#\"\")F-F,F,/-F66$FgqF.,(*&FfqF,FjpF,F,*
+&\"$9\"F,FgqF,F3*&\"#\\F,-&F*6#\"\"*F-F,F,/-F66$FdrF.,(*&FcrF,FgqF,F,*
+&\"#!)F,FdrF,F3*&\"#JF,-&F*6#\"#5F-F,F,/-F66$FasF.,(*&F`sF,FdrF,F,*&\"
+#UF,FasF,F3*&\"#6F,-&F*6#F]tF-F,F,/F^t$F,F3" }}}{EXCHG {PARA 0 "> " 0 
+"" {MPLTEXT 1 0 18 "infolevel[all]:=0;" }}{PARA 11 "" 1 "" {XPPMATH 
+20 "6#>&%*infolevelG6#%$allG\"\"!" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 114 "eq[N+1]:=u[N+1](t)=0.01+0.005*sin(Pi*t):\nEqs:=seq(e
+q[i],i=0..N+1):\nsol:=dsolve(\{Eqs,ics\},type=numeric,stiff=true):" }}
+}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 28 "infolevel[all]:=0;\n#sol(.5
+);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>&%*infolevelG6#%$allG\"\"!" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 12 "with(plots):" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 35 "P1:=odeplot(sol,[t,u[10](t)],0..1):
+" }}}}{MARK "25 0 0" 0 }{VIEWOPTS 1 1 0 1 1 1803 1 1 1 1 }
+{PAGENUMBERS 0 1 2 33 1 1 }

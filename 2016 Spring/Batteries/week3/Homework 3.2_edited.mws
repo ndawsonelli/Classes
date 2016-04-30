@@ -1,0 +1,133 @@
+{VERSION 6 0 "IBM INTEL NT" "6.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{CSTYLE "2D Math" -1 2 "Times" 0 1 0 0 0 0 0 0 2 0 0 0 0 
+0 0 1 }{CSTYLE "2D Output" 2 20 "" 0 1 0 0 255 1 0 0 0 0 0 0 0 0 0 1 }
+{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 
+2 2 1 1 1 1 }1 1 0 0 0 0 1 0 1 0 2 2 0 1 }{PSTYLE "Warning" -1 7 1 
+{CSTYLE "" -1 -1 "Courier" 1 10 0 0 255 1 2 2 2 2 2 1 1 1 3 1 }1 1 0 
+0 0 0 1 0 1 0 2 2 0 1 }{PSTYLE "Error" -1 8 1 {CSTYLE "" -1 -1 "Courie
+r" 1 10 255 0 255 1 2 2 2 2 2 1 1 1 3 1 }1 1 0 0 0 0 1 0 1 0 2 2 0 1 }
+{PSTYLE "Maple Output" -1 11 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 
+2 2 2 2 2 2 1 1 1 1 }3 3 0 0 0 0 1 0 1 0 2 2 0 1 }{PSTYLE "Maple Outpu
+t" -1 12 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 1 1 1 }
+1 3 0 0 0 0 1 0 1 0 2 2 0 1 }}
+{SECT 0 {EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 1741 "Euler_Backward_Ana
+lytical:= proc(f, N, t0, tn, y0, guess, Jac_Analytical, tol, maxiter)
+\nlocal h, F, y, n, Y, YY, xnew, nn, i, j, m , func;\nh:= (tn - t0) / \+
+N;\nwith(LinearAlgebra):\n# Find the number of variables nn\nnn:= Dime
+nsion(f);\n\nY:= Vector(nn);\nYY:= Vector(nn);\ny:= Matrix(nn, N + 1);
+\nF:= unapply(f, x);\n\n#print(\"ok\");\n# Initializing values of y at
+ t = t0\nfor i from 1 to nn do#\ny[i, 1]:= y0[i]; \nend do;\n\n#print(
+\"okay\");\nfor n from 2 to N do#\nfor j from 1 to nn do#\nfor m from \+
+1 to nn do#\nx[m] := y[m, n];#\nend do;\n# code seems to run to here a
+lright, it's after this that an error is thrown\n#Y[j]:= y[j, n]= y[j,
+ n - 1] + h * (subs(x[m= 1..nn], F[j]));#not sure what you're trying t
+o do here, to call F  #you should use the format F(x[i])\nY[j]:= y[j, \+
+n]= y[j, n - 1] + h * F(x[i]);# this is as far as I got troubleshootin
+g\nYY[j]:= rhs(Y[j]) - lhs(Y[j]);\nend do;\nfunc:= Vector[YY];\nxnew:=
+ Newton_Raphson_Analytical(func, guess, Jac_Analytical, tol, maxiter);
+\nfor j from 1 to nn do\ny[j, n]:= xnew[j];\nend do;\nend do;\ny;\n#pr
+int(\"finished\");\nend proc;\n\nNewton_Raphson_Analytical:= proc(f, g
+uess, Jac_Analytical, tol, maxiter)\nlocal dx, Jac, F, xold, xnew, Err
+, iter;\nF:= unapply(f, x);\nJac:= Jac_Analytical(f);\nxold:= guess;\n
+dx:= LinearAlgebra:- LinearSolve(-Jac(xold),F(xold));\nxnew:= xold + d
+x;\nxold:= xnew;\nErr:= 10;\niter:= 1;\nwhile Err > tol and iter < max
+iter do\niter:= iter + 1;\ndx:= LinearAlgebra:- LinearSolve(-Jac(xold)
+, F(xold));\nxnew:= xold + dx;\nErr:= LinearAlgebra:- Norm(xold - xnew
+);\nxold:= xnew;\nend;\nreturn xnew;\nend proc;\n\nJac_Analytical:= pr
+oc(function)\nlocal N, jac, F, x;\nN:= LinearAlgebra:- Dimension(funct
+ion);\njac:= VectorCalculus:- Jacobian(function,[seq(x[i], i = 1..N)])
+;\nF:= unapply(jac, x);\nreturn F;\nend proc;" }}{PARA 8 "" 0 "" 
+{TEXT -1 0 "" }}{PARA 7 "" 1 "" {TEXT -1 83 "Warning, `x` is implicitl
+y declared local to procedure `Euler_Backward_Analytical`\n" }}{PARA 
+12 "" 1 "" {XPPMATH 20 "6#>%:Euler_Backward_AnalyticalGf*6+%\"fG%\"NG%
+#t0G%#tnG%#y0G%&guessG%/Jac_AnalyticalG%$tolG%(maxiterG6/%\"hG%\"FG%\"
+yG%\"nG%\"YG%#YYG%%xnewG%#nnG%\"iG%\"jG%\"mG%%funcG%\"xG6\"F>C/>8$*&,&
+9'\"\"\"9&!\"\"FE9%FG-%%withG6#%.LinearAlgebraG>8+-_FL%*DimensionG6#9$
+>8(-%'VectorG6#FN>8)FV>8&-%'MatrixG6$FN,&FHFEFEFE>8%-%(unapplyG6$FS80-
+%&printG6#Q#okF>?(8,FEFEFN%%trueG>&Ffn6$FfoFE&9(6#Ffo-Fbo6#Q%okayF>?(8
+'\"\"#FEFHFgoC&?(8-FEFEFNFgoC%?(8.FEFEFNFgo>&F`o6#Fip&Ffn6$FipFbp>&FU6
+#Ffp/&Ffn6$FfpFbp,&&Ffn6$Ffp,&FbpFEFEFGFE*&FAFE-F\\o6#&F`oF]pFEFE>&FZF
+aq,&-%$rhsG6#F`qFE-%$lhsGFbrFG>8/&FW6#FZ>8*-%:Newton_Raphson_Analytica
+lG6'Ffr9)9*9+9,?(FfpFEFEFNFgo>Fcq&FjrFaqFfn-Fbo6#Q)finishedF>F>F>F>" }
+}{PARA 12 "" 1 "" {XPPMATH 20 "6#>%:Newton_Raphson_AnalyticalGf*6'%\"f
+G%&guessG%/Jac_AnalyticalG%$tolG%(maxiterG6)%#dxG%$JacG%\"FG%%xoldG%%x
+newG%$ErrG%%iterG6\"F4C,>8&-%(unapplyG6$9$%\"xG>8%-9&6#F;>8'9%>8$-_%.L
+inearAlgebraG%,LinearSolveG6$,$-F>6#FC!\"\"-F7FN>8(,&FC\"\"\"FFFT>FCFR
+>8)\"#5>8*FT?(F4FTFTF4329'FW2FZ9(C'>FZ,&FZFTFTFT>FFFG>FRFS>FW-_FI%%Nor
+mG6#,&FCFTFRFO>FCFROFRF4F4F4" }}{PARA 12 "" 1 "" {XPPMATH 20 "6#>%/Jac
+_AnalyticalGf*6#%)functionG6&%\"NG%$jacG%\"FG%\"xG6\"F-C&>8$-_%.Linear
+AlgebraG%*DimensionG6#9$>8%-_%/VectorCalculusG%)JacobianG6$F67#-%$seqG
+6$&8'6#%\"iG/FE;\"\"\"F0>8&-%(unapplyG6$F8FCOFJF-F-F-" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 862 "# Now, to perform error analysis o
+n Homework problem 3.1 and show that it converges to O(h) by decreasin
+g the step size by 2.\n#restart;\nmaxiter:= 20;#\nt0:= 0;\ntn:= 1;\nto
+l:= 10 ^ (-3);\nguess:= Vector(2, [1, 1]);\ninitial:= Vector(2, [1, 0]
+);\nn_of_n:= 4;#\neqn1:= -(y[1] ^ 2);\neqn2:= (y[1] ^ 2) - y[2];\nVars
+:= [y[1] = x[1], y[2] = x[2]];#\nEqn1:= subs(Vars, eqn1);\nEqn2:= subs
+(Vars, eqn2);\nf:= Vector(2, [Eqn1, Eqn2]);\nya:= Vector(n_of_n);\nyb:
+= Vector(n_of_n - 1);\nyc:= Vector(n_of_n - 2);\n\nsol:=Euler_Backward
+_Analytical(f, 2 ^ i, t0, tn, initial, guess, Jac_Analytical, tol, max
+iter);\n#for i from 1 to n_of_n do\n#ya[i]:= Euler_Backward_Analytical
+(f, 2 ^ i, t0, tn, initial, guess, Jac_Analytical, tol, maxiter);\n#en
+d do;\n#for i from 1 to n_of_n - 1 do\n#yb[i]:= abs(ya[i + 1] - ya[i])
+;\n#end do;\n#for i from 1 to n_of_n - 2 do\n#yc[i]:= yb[i] / yb[i + 1
+];\n#end do;\nyc;" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%(maxiterG\"#?" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%#t0G\"\"!" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>%#tnG\"\"\"" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%$tolG
+#\"\"\"\"%+5" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%&guessG-%'RTABLEG6%
+\"+uel%f%-%'MATRIXG6#7$7#\"\"\"F-&%'VectorG6#%'columnG" }}{PARA 11 "" 
+1 "" {XPPMATH 20 "6#>%(initialG-%'RTABLEG6%\"+Qfl%f%-%'MATRIXG6#7$7#\"
+\"\"7#\"\"!&%'VectorG6#%'columnG" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%
+'n_of_nG\"\"%" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%%eqn1G,$*$)&%\"yG6#
+\"\"\"\"\"#F+!\"\"" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%%eqn2G,&*$)&%
+\"yG6#\"\"\"\"\"#F+F+&F)6#F,!\"\"" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>
+%%VarsG7$/&%\"yG6#\"\"\"&%\"xGF)/&F(6#\"\"#&F,F/" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>%%Eqn1G,$*$)&%\"xG6#\"\"\"\"\"#F+!\"\"" }}{PARA 11 "" 
+1 "" {XPPMATH 20 "6#>%%Eqn2G,&*$)&%\"xG6#\"\"\"\"\"#F+F+&F)6#F,!\"\"" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"fG-%'RTABLEG6%\"+-gl%f%-%'MATRIX
+G6#7$7#,$*$)&%\"xG6#\"\"\"\"\"#F4!\"\"7#,&*$F0F4F4&F26#F5F6&%'VectorG6
+#%'columnG" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%#yaG-%'RTABLEG6%\"+mgl
+%f%-%'MATRIXG6#7&7#\"\"!F-F-F-&%'VectorG6#%'columnG" }}{PARA 11 "" 1 "
+" {XPPMATH 20 "6#>%#ybG-%'RTABLEG6%\"+Ihl%f%-%'MATRIXG6#7%7#\"\"!F-F-&
+%'VectorG6#%'columnG" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%#ycG-%'RTABL
+EG6%\"+%>cYf%-%'MATRIXG6#7$7#\"\"!F-&%'VectorG6#%'columnG" }}{PARA 11 
+"" 1 "" {XPPMATH 20 "6#Q#ok6\"" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#Q%ok
+ay6\"" }}{PARA 8 "" 1 "" {TEXT -1 123 "Error, (in Euler_Backward_Analy
+tical) a constant cannot be added to a Vector; use +~ for elementwise \+
+addition instead of +\n" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#-%'RTABLEG6
+%\"+%>cYf%-%'MATRIXG6#7$7#\"\"!F+&%'VectorG6#%'columnG" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 0 "" }}}}{MARK "0 0 0" 596 }{VIEWOPTS 1 1 0 1 1 1803 1 
+1 1 1 }{PAGENUMBERS 0 1 2 33 1 1 }{RTABLE_HANDLES 4594655874 
+4594655938 4594656002 4594656066 4594656130 4594656194 }{RTABLE 
+M7R0
+I7RTABLE_SAVE/4594655874X*%)anythingG6"F%[gl!#%!!!"#"#"""F&F%
+}
+{RTABLE 
+M7R0
+I7RTABLE_SAVE/4594655938X*%)anythingG6"F%[gl!#%!!!"#"#"""""!F%
+}
+{RTABLE 
+M7R0
+I7RTABLE_SAVE/4594656002X*%)anythingG6"F%[gl!#%!!!"#"#,$*$&%"xG6#"""""#!""z'6$F
+(&F)6#F,[[[[[_[[[[sF+\[[[[[[[[[oF-F%
+}
+{RTABLE 
+M7R0
+I7RTABLE_SAVE/4594656066X*%)anythingG6"F%[gl!#%!!!"%"%""!F&F&F&F%
+}
+{RTABLE 
+M7R0
+I7RTABLE_SAVE/4594656130X*%)anythingG6"F%[gl!#%!!!"$"$""!F&F&F%
+}
+{RTABLE 
+M7R0
+I7RTABLE_SAVE/4594656194X*%)anythingG6"F%[gl!#%!!!"#"#""!F&F%
+}

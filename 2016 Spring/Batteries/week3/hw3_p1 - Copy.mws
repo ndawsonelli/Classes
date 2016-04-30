@@ -1,0 +1,226 @@
+{VERSION 6 0 "IBM INTEL NT" "6.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{CSTYLE "2D Math" -1 2 "Times" 0 1 0 0 0 0 0 0 2 0 0 0 0 
+0 0 1 }{CSTYLE "2D Output" 2 20 "" 0 1 0 0 255 1 0 0 0 0 0 0 0 0 0 1 }
+{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 
+2 2 1 1 1 1 }1 1 0 0 0 0 1 0 1 0 2 2 0 1 }{PSTYLE "Warning" -1 7 1 
+{CSTYLE "" -1 -1 "Courier" 1 10 0 0 255 1 2 2 2 2 2 1 1 1 3 1 }1 1 0 
+0 0 0 1 0 1 0 2 2 0 1 }{PSTYLE "Error" -1 8 1 {CSTYLE "" -1 -1 "Courie
+r" 1 10 255 0 255 1 2 2 2 2 2 1 1 1 3 1 }1 1 0 0 0 0 1 0 1 0 2 2 0 1 }
+{PSTYLE "Maple Output" -1 11 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 
+2 2 2 2 2 2 1 1 1 1 }3 3 0 0 0 0 1 0 1 0 2 2 0 1 }{PSTYLE "Maple Outpu
+t" -1 12 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 1 1 1 }
+1 3 0 0 0 0 1 0 1 0 2 2 0 1 }}
+{SECT 0 {EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 52 "restart:\neq1:=diff(
+u(x,t),t)=diff(diff(u(x,t),x),x);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>
+%$eq1G/-%%diffG6$-%\"uG6$%\"xG%\"tGF--F'6$F)-%\"$G6$F,\"\"#" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 146 "N:=10;\ny:=(2*n-1)/2*Pi;\nA
+n:=int((1-Ceq)*cos(y*x),x=0..1)/int(cos(y*x)^2,x=0..1);\nC:=Ceq+evalf(
+Sum(An*cos(y*x)*exp(-y^2*t),n=1..N));\ndC:=diff(C,x);" }}{PARA 11 "" 
+1 "" {XPPMATH 20 "6#>%\"NG\"#5" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"
+yG,$*(\"\"#!\"\",&*&F'\"\"\"%\"nGF+F+F+F(F+%#PiGF+F+" }}{PARA 11 "" 1 
+"" {XPPMATH 20 "6#>%#AnG,$**\"\"%\"\"\"-%$cosG6#*&%#PiGF(%\"nGF(F(,&F(
+!\"\"%$CeqGF(F(,(*(\"\"#F(F-F(F.F(F(*(F4F(-%$sinGF+F(F)F(F0F-F0F0F(" }
+}{PARA 12 "" 1 "" {XPPMATH 20 "6#>%\"CG,8%$CeqG\"\"\"**$\"+X&RKF\"!\"*
+F',&$F'\"\"!!\"\"F&F'F'-%$cosG6#,$*&$\"+Fjzq:F+F'%\"xGF'F'F'-%$expG6#,
+$*&$\"++6SnCF+F'%\"tGF'F/F'F/**$\"+;=8WU!#5F'F,F'-F16#,$*&$\"+!)*)Q7ZF
++F'F7F'F'F'-F96#,$*&$\"+!*4m?A!\")F'F?F'F/F'F'**$\"+*3zka#FCF'F,F'-F16
+#,$*&$\"+M;)R&yF+F'F7F'F'F'-F96#,$*&$\"+^F]ohFPF'F?F'F/F'F/**$\"+NO\"*
+==FCF'F,F'-F16#,$*&$\"+Hub*4\"FPF'F7F'F'F'-F96#,$*&$\"+Rl-47!\"(F'F?F'
+F/F'F'**$\"+01r99FCF'F,F'-F16#,$*&$\"+%p;PT\"FPF'F7F'F'F'-F96#,$*&$\"+
+\"*[f)*>FioF'F?F'F/F'F/**$\"+&\\!\\d6FCF'F,F'-F16#,$*&$\"+gf(ys\"FPF'F
+7F'F'F'-F96#,$*&$\"+J`b&)HFioF'F?F'F/F'F'**$\"+W.:%z*!#6F'F,F'-F16#,$*
+&$\"+D_.U?FPF'F7F'F'F'-F96#,$*&$\"+gy!*pTFioF'F?F'F/F'F/**$\"+KOE)[)F[
+rF'F,F'-F16#,$*&$\"+!\\%>cBFPF'F7F'F'F'-F96#,$*&$\"+wCl^bFioF'F?F'F/F'
+F'**$\"+\"QW'*[(F[rF'F,F'-F16#,$*&$\"+cPNqEFPF'F7F'F'F'-F96#,$*&$\"+!=
+*yIrFioF'F?F'F/F'F/**$\"+i2E,nF[rF'F,F'-F16#,$*&$\"+@I^%)HFPF'F7F'F'F'
+-F96#,$*&$\"+szJ2*)FioF'F?F'F/F'F'" }}{PARA 12 "" 1 "" {XPPMATH 20 "6#
+>%#dCG,6**$\"+,+++?!\"*\"\"\",&$F*\"\"!!\"\"%$CeqGF*F*-%$sinG6#,$*&$\"
++Fjzq:F)F*%\"xGF*F*F*-%$expG6#,$*&$\"++6SnCF)F*%\"tGF*F.F*F***$\"+++++
+?F)F*F+F*-F16#,$*&$\"+!)*)Q7ZF)F*F7F*F*F*-F96#,$*&$\"+!*4m?A!\")F*F?F*
+F.F*F.**$\"+++++?F)F*F+F*-F16#,$*&$\"+M;)R&yF)F*F7F*F*F*-F96#,$*&$\"+^
+F]ohFOF*F?F*F.F*F***$\"+++++?F)F*F+F*-F16#,$*&$\"+Hub*4\"FOF*F7F*F*F*-
+F96#,$*&$\"+Rl-47!\"(F*F?F*F.F*F.**$\"+********>F)F*F+F*-F16#,$*&$\"+%
+p;PT\"FOF*F7F*F*F*-F96#,$*&$\"+\"*[f)*>FhoF*F?F*F.F*F***$\"+++++?F)F*F
++F*-F16#,$*&$\"+gf(ys\"FOF*F7F*F*F*-F96#,$*&$\"+J`b&)HFhoF*F?F*F.F*F.*
+*FQF*F+F*-F16#,$*&$\"+D_.U?FOF*F7F*F*F*-F96#,$*&$\"+gy!*pTFhoF*F?F*F.F
+*F***$\"+++++?F)F*F+F*-F16#,$*&$\"+!\\%>cBFOF*F7F*F*F*-F96#,$*&$\"+wCl
+^bFhoF*F?F*F.F*F.**FQF*F+F*-F16#,$*&$\"+cPNqEFOF*F7F*F*F*-F96#,$*&$\"+
+!=*yIrFhoF*F?F*F.F*F***$\"+++++?F)F*F+F*-F16#,$*&$\"+@I^%)HFOF*F7F*F*F
+*-F96#,$*&$\"+szJ2*)FhoF*F?F*F.F*F." }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%#AnG,$**\"\"%\"
+\"\"-%$cosG6#*&%#PiGF(%\"nGF(F(,&F(!\"\"%$CeqGF(F(,(*(\"\"#F(F-F(F.F(F
+(*(F4F(-%$sinGF+F(F)F(F0F-F0F0F(" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 2 "C;" }}{PARA 12 "" 1 "" {XPPMATH 20 "6#,8%$CeqG\"\"\"*.
+\"\"%F%-%$cosG6#*&%#PiGF%%\"nGF%F%,&F%!\"\"F$F%F%,(*(\"\"#F%F,F%F-F%F%
+*(F2F%-%$sinGF*F%F(F%F/F,F/F/-F)6#,$*&$\"+Fjzq:!\"*F%%\"xGF%F%F%-%$exp
+G6#,$*&$\"++6SnCF<F%%\"tGF%F/F%F%*.F'F%F(F%F.F%F0F/-F)6#,$*&$\"+!)*)Q7
+ZF<F%F=F%F%F%-F?6#,$*&$\"+!*4m?A!\")F%FEF%F/F%F%*.F'F%F(F%F.F%F0F/-F)6
+#,$*&$\"+M;)R&yF<F%F=F%F%F%-F?6#,$*&$\"+^F]ohFSF%FEF%F/F%F%*.F'F%F(F%F
+.F%F0F/-F)6#,$*&$\"+Hub*4\"FSF%F=F%F%F%-F?6#,$*&$\"+Rl-47!\"(F%FEF%F/F
+%F%*.F'F%F(F%F.F%F0F/-F)6#,$*&$\"+%p;PT\"FSF%F=F%F%F%-F?6#,$*&$\"+\"*[
+f)*>FhoF%FEF%F/F%F%*.F'F%F(F%F.F%F0F/-F)6#,$*&$\"+gf(ys\"FSF%F=F%F%F%-
+F?6#,$*&$\"+J`b&)HFhoF%FEF%F/F%F%*.F'F%F(F%F.F%F0F/-F)6#,$*&$\"+D_.U?F
+SF%F=F%F%F%-F?6#,$*&$\"+gy!*pTFhoF%FEF%F/F%F%*.F'F%F(F%F.F%F0F/-F)6#,$
+*&$\"+!\\%>cBFSF%F=F%F%F%-F?6#,$*&$\"+wCl^bFhoF%FEF%F/F%F%*.F'F%F(F%F.
+F%F0F/-F)6#,$*&$\"+cPNqEFSF%F=F%F%F%-F?6#,$*&$\"+!=*yIrFhoF%FEF%F/F%F%
+*.F'F%F(F%F.F%F0F/-F)6#,$*&$\"+@I^%)HFSF%F=F%F%F%-F?6#,$*&$\"+szJ2*)Fh
+oF%FEF%F/F%F%" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 3 "Pi;" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#%#PiG" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 18 "c_1:=subs(x=0.,C);" }}{PARA 12 "" 1 "" {XPPMATH 20 "6
+#>%$c_1G,8%$CeqG\"\"\"*.\"\"%F'-%$cosG6#*&%#PiGF'%\"nGF'F',&F'!\"\"F&F
+'F',(*(\"\"#F'F.F'F/F'F'*(F4F'-%$sinGF,F'F*F'F1F.F1F1-F+6#$\"\"!F;F'-%
+$expG6#,$*&$\"++6SnC!\"*F'%\"tGF'F1F'F'*.F)F'F*F'F0F'F2F1F8F'-F=6#,$*&
+$\"+!*4m?A!\")F'FDF'F1F'F'*.F)F'F*F'F0F'F2F1F8F'-F=6#,$*&$\"+^F]ohFLF'
+FDF'F1F'F'*.F)F'F*F'F0F'F2F1F8F'-F=6#,$*&$\"+Rl-47!\"(F'FDF'F1F'F'*.F)
+F'F*F'F0F'F2F1F8F'-F=6#,$*&$\"+\"*[f)*>FenF'FDF'F1F'F'*.F)F'F*F'F0F'F2
+F1F8F'-F=6#,$*&$\"+J`b&)HFenF'FDF'F1F'F'*.F)F'F*F'F0F'F2F1F8F'-F=6#,$*
+&$\"+gy!*pTFenF'FDF'F1F'F'*.F)F'F*F'F0F'F2F1F8F'-F=6#,$*&$\"+wCl^bFenF
+'FDF'F1F'F'*.F)F'F*F'F0F'F2F1F8F'-F=6#,$*&$\"+!=*yIrFenF'FDF'F1F'F'*.F
+)F'F*F'F0F'F2F1F8F'-F=6#,$*&$\"+szJ2*)FenF'FDF'F1F'F'" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 13 "with(plots):\n" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 170 "p1:=plot(subs(Ceq=0.01,c_1),t=0..5):\np2:=plot(sub
+s(Ceq=0.25,c_1),t=0..5):\np3:=plot(subs(Ceq=0.50,c_1),t=0..5):\np4:=pl
+ot(subs(Ceq=0.75,c_1),t=0..5):\n\ndisplay(p1,p2,p3,p4);" }}{PARA 7 "" 
+1 "" {TEXT -1 782 "Warning, expecting only range variable t in express
+ion .1e-1-3.96*cos(Pi*n)/(2*Pi*n-2*sin(Pi*n)*cos(Pi*n)-Pi)*exp(-2.4674
+01100*t)-3.96*cos(Pi*n)/(2*Pi*n-2*sin(Pi*n)*cos(Pi*n)-Pi)*exp(-22.2066
+0990*t)-3.96*cos(Pi*n)/(2*Pi*n-2*sin(Pi*n)*cos(Pi*n)-Pi)*exp(-61.68502
+751*t)-3.96*cos(Pi*n)/(2*Pi*n-2*sin(Pi*n)*cos(Pi*n)-Pi)*exp(-120.90265
+39*t)-3.96*cos(Pi*n)/(2*Pi*n-2*sin(Pi*n)*cos(Pi*n)-Pi)*exp(-199.859489
+1*t)-3.96*cos(Pi*n)/(2*Pi*n-2*sin(Pi*n)*cos(Pi*n)-Pi)*exp(-298.5555331
+*t)-3.96*cos(Pi*n)/(2*Pi*n-2*sin(Pi*n)*cos(Pi*n)-Pi)*exp(-416.9907860*
+t)-3.96*cos(Pi*n)/(2*Pi*n-2*sin(Pi*n)*cos(Pi*n)-Pi)*exp(-555.1652476*t
+)-3.96*cos(Pi*n)/(2*Pi*n-2*sin(Pi*n)*cos(Pi*n)-Pi)*exp(-713.0789180*t)
+-3.96*cos(Pi*n)/(2*Pi*n-2*sin(Pi*n)*cos(Pi*n)-Pi)*exp(-890.7317972*t) \+
+to be plotted but found name n\n" }}{PARA 7 "" 1 "" {TEXT -1 780 "Warn
+ing, expecting only range variable t in expression .25-3.00*cos(Pi*n)/
+(2*Pi*n-2*sin(Pi*n)*cos(Pi*n)-Pi)*exp(-2.467401100*t)-3.00*cos(Pi*n)/(
+2*Pi*n-2*sin(Pi*n)*cos(Pi*n)-Pi)*exp(-22.20660990*t)-3.00*cos(Pi*n)/(2
+*Pi*n-2*sin(Pi*n)*cos(Pi*n)-Pi)*exp(-61.68502751*t)-3.00*cos(Pi*n)/(2*
+Pi*n-2*sin(Pi*n)*cos(Pi*n)-Pi)*exp(-120.9026539*t)-3.00*cos(Pi*n)/(2*P
+i*n-2*sin(Pi*n)*cos(Pi*n)-Pi)*exp(-199.8594891*t)-3.00*cos(Pi*n)/(2*Pi
+*n-2*sin(Pi*n)*cos(Pi*n)-Pi)*exp(-298.5555331*t)-3.00*cos(Pi*n)/(2*Pi*
+n-2*sin(Pi*n)*cos(Pi*n)-Pi)*exp(-416.9907860*t)-3.00*cos(Pi*n)/(2*Pi*n
+-2*sin(Pi*n)*cos(Pi*n)-Pi)*exp(-555.1652476*t)-3.00*cos(Pi*n)/(2*Pi*n-
+2*sin(Pi*n)*cos(Pi*n)-Pi)*exp(-713.0789180*t)-3.00*cos(Pi*n)/(2*Pi*n-2
+*sin(Pi*n)*cos(Pi*n)-Pi)*exp(-890.7317972*t) to be plotted but found n
+ame n\n" }}{PARA 7 "" 1 "" {TEXT -1 780 "Warning, expecting only range
+ variable t in expression .50-2.00*cos(Pi*n)/(2*Pi*n-2*sin(Pi*n)*cos(P
+i*n)-Pi)*exp(-2.467401100*t)-2.00*cos(Pi*n)/(2*Pi*n-2*sin(Pi*n)*cos(Pi
+*n)-Pi)*exp(-22.20660990*t)-2.00*cos(Pi*n)/(2*Pi*n-2*sin(Pi*n)*cos(Pi*
+n)-Pi)*exp(-61.68502751*t)-2.00*cos(Pi*n)/(2*Pi*n-2*sin(Pi*n)*cos(Pi*n
+)-Pi)*exp(-120.9026539*t)-2.00*cos(Pi*n)/(2*Pi*n-2*sin(Pi*n)*cos(Pi*n)
+-Pi)*exp(-199.8594891*t)-2.00*cos(Pi*n)/(2*Pi*n-2*sin(Pi*n)*cos(Pi*n)-
+Pi)*exp(-298.5555331*t)-2.00*cos(Pi*n)/(2*Pi*n-2*sin(Pi*n)*cos(Pi*n)-P
+i)*exp(-416.9907860*t)-2.00*cos(Pi*n)/(2*Pi*n-2*sin(Pi*n)*cos(Pi*n)-Pi
+)*exp(-555.1652476*t)-2.00*cos(Pi*n)/(2*Pi*n-2*sin(Pi*n)*cos(Pi*n)-Pi)
+*exp(-713.0789180*t)-2.00*cos(Pi*n)/(2*Pi*n-2*sin(Pi*n)*cos(Pi*n)-Pi)*
+exp(-890.7317972*t) to be plotted but found name n\n" }}{PARA 7 "" 1 "
+" {TEXT -1 780 "Warning, expecting only range variable t in expression
+ .75-1.00*cos(Pi*n)/(2*Pi*n-2*sin(Pi*n)*cos(Pi*n)-Pi)*exp(-2.467401100
+*t)-1.00*cos(Pi*n)/(2*Pi*n-2*sin(Pi*n)*cos(Pi*n)-Pi)*exp(-22.20660990*
+t)-1.00*cos(Pi*n)/(2*Pi*n-2*sin(Pi*n)*cos(Pi*n)-Pi)*exp(-61.68502751*t
+)-1.00*cos(Pi*n)/(2*Pi*n-2*sin(Pi*n)*cos(Pi*n)-Pi)*exp(-120.9026539*t)
+-1.00*cos(Pi*n)/(2*Pi*n-2*sin(Pi*n)*cos(Pi*n)-Pi)*exp(-199.8594891*t)-
+1.00*cos(Pi*n)/(2*Pi*n-2*sin(Pi*n)*cos(Pi*n)-Pi)*exp(-298.5555331*t)-1
+.00*cos(Pi*n)/(2*Pi*n-2*sin(Pi*n)*cos(Pi*n)-Pi)*exp(-416.9907860*t)-1.
+00*cos(Pi*n)/(2*Pi*n-2*sin(Pi*n)*cos(Pi*n)-Pi)*exp(-555.1652476*t)-1.0
+0*cos(Pi*n)/(2*Pi*n-2*sin(Pi*n)*cos(Pi*n)-Pi)*exp(-713.0789180*t)-1.00
+*cos(Pi*n)/(2*Pi*n-2*sin(Pi*n)*cos(Pi*n)-Pi)*exp(-890.7317972*t) to be
+ plotted but found name n\n" }}{PARA 8 "" 1 "" {TEXT -1 26 "Plotting e
+rror, empty plot" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }
+{XPPMATH 20 "6#>%#dCG,6*.$\"+3`=$G'!\"*\"\"\"-%$cosG6#*&%#PiGF*%\"nGF*
+F*,&F*!\"\"%$CeqGF*F*,(*(\"\"#F*F/F*F0F*F**(F6F*-%$sinGF-F*F+F*F2F/F2F
+2-F96#,$*&$\"+Fjzq:F)F*%\"xGF*F*F*-%$expG6#,$*&$\"++6SnCF)F*%\"tGF*F2F
+*F2*.$\"+#fb\\)=!\")F*F+F*F1F*F4F2-F96#,$*&$\"+!)*)Q7ZF)F*F@F*F*F*-FB6
+#,$*&$\"+!*4m?AFLF*FHF*F2F*F2*.$\"+aEfTJFLF*F+F*F1F*F4F2-F96#,$*&$\"+M
+;)R&yF)F*F@F*F*F*-FB6#,$*&$\"+^F]ohFLF*FHF*F2F*F2*.$\"+;(H#)R%FLF*F+F*
+F1F*F4F2-F96#,$*&$\"+Hub*4\"FLF*F@F*F*F*-FB6#,$*&$\"+Rl-47!\"(F*FHF*F2
+F*F2*.$\"+wn'[l&FLF*F+F*F1F*F4F2-F96#,$*&$\"+%p;PT\"FLF*F@F*F*F*-FB6#,
+$*&$\"+\"*[f)*>FapF*FHF*F2F*F2*.$\"+SQ]6pFLF*F+F*F1F*F4F2-F96#,$*&$\"+
+gf(ys\"FLF*F@F*F*F*-FB6#,$*&$\"+J`b&)HFapF*FHF*F2F*F2*.$\"++49o\")FLF*
+F+F*F1F*F4F2-F96#,$*&$\"+D_.U?FLF*F@F*F*F*-FB6#,$*&$\"+gy!*pTFapF*FHF*
+F2F*F2*.$\"+gzxC%*FLF*F+F*F1F*F4F2-F96#,$*&$\"+!\\%>cBFLF*F@F*F*F*-FB6
+#,$*&$\"+wCl^bFapF*FHF*F2F*F2*.$\"+-:9o5FapF*F+F*F1F*F4F2-F96#,$*&$\"+
+cPNqEFLF*F@F*F*F*-FB6#,$*&$\"+!=*yIrFapF*FHF*F2F*F2*.$\"+3_!Q>\"FapF*F
++F*F1F*F4F2-F96#,$*&$\"+@I^%)HFLF*F@F*F*F*-FB6#,$*&$\"+szJ2*)FapF*FHF*
+F2F*F2" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 284 "with(plots):\nm:
+=1;F:=96485;D1:=1e-12;L:=100e-6;ci:=1000;\nibatt:=subs(x=1,-m*F*D1*ci/
+L*dC);\np11:=plot(subs(Ceq=0.01,ibatt),t=0..500);\np12:=plot(subs(Ceq=
+0.25,ibatt),t=0..500):\np13:=plot(subs(Ceq=0.50,ibatt),t=0..500):\np14
+:=plot(subs(Ceq=0.75,ibatt),t=0..500):\ndisplay(p11,p12,p13,p14);" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"mG\"\"\"" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>%\"FG\"&&['*" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%#D1G
+$\"\"\"!#7" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"LG$\"$+\"!\"'" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#>%#ciG\"%+5" }}{PARA 12 "" 1 "" 
+{XPPMATH 20 "6#>%&ibattG,6*.$\"+W8Lig!\"*\"\"\"-%$cosG6#*&%#PiGF*%\"nG
+F*F*,&F*!\"\"%$CeqGF*F*,(*(\"\"#F*F/F*F0F*F**(F6F*-%$sinGF-F*F+F*F2F/F
+2F2-F96#$\"+Fjzq:F)F*-%$expG6#,$*&$\"++6SnCF)F*%\"tGF*F2F*F**.$\"+.%*p
+==!\")F*F+F*F1F*F4F2-F96#$\"+!)*)Q7ZF)F*-F?6#,$*&$\"+!*4m?AFIF*FEF*F2F
+*F**.$\"+sc;JIFIF*F+F*F1F*F4F2-F96#$\"+M;)R&yF)F*-F?6#,$*&$\"+^F]ohFIF
+*FEF*F2F*F**.$\"+T>jVUFIF*F+F*F1F*F4F2-F96#$\"+Hub*4\"FIF*-F?6#,$*&$\"
++Rl-47!\"(F*FEF*F2F*F**.$\"+4#)4caFIF*F+F*F1F*F4F2-F96#$\"+%p;PT\"FIF*
+-F?6#,$*&$\"+\"*[f)*>FhoF*FEF*F2F*F**.$\"+![k&omFIF*F+F*F1F*F4F2-F96#$
+\"+gf(ys\"FIF*-F?6#,$*&$\"+J`b&)HFhoF*FEF*F2F*F**.$\"+Z2.\")yFIF*F+F*F
+1F*F4F2-F96#$\"+D_.U?FIF*-F?6#,$*&$\"+gy!*pTFhoF*FEF*F2F*F**.$\"+:q\\$
+4*FIF*F+F*F1F*F4F2-F96#$\"+!\\%>cBFIF*-F?6#,$*&$\"+wCl^bFhoF*FEF*F2F*F
+**.$\"+GjfI5FhoF*F+F*F1F*F4F2-F96#$\"+cPNqEFIF*-F?6#,$*&$\"+!=*yIrFhoF
+*FEF*F2F*F**.$\"+bH%=:\"FhoF*F+F*F1F*F4F2-F96#$\"+@I^%)HFIF*-F?6#,$*&$
+\"+szJ2*)FhoF*FEF*F2F*F*" }}{PARA 7 "" 1 "" {TEXT -1 847 "Warning, exp
+ecting only range variable t in expression -6.001708031*cos(Pi*n)/(2*P
+i*n-2*sin(Pi*n)*cos(Pi*n)-Pi)*exp(-2.467401100*t)+18.00512409*cos(Pi*n
+)/(2*Pi*n-2*sin(Pi*n)*cos(Pi*n)-Pi)*exp(-22.20660990*t)-30.00854015*co
+s(Pi*n)/(2*Pi*n-2*sin(Pi*n)*cos(Pi*n)-Pi)*exp(-61.68502751*t)+42.01195
+622*cos(Pi*n)/(2*Pi*n-2*sin(Pi*n)*cos(Pi*n)-Pi)*exp(-120.9026539*t)-54
+.01537227*cos(Pi*n)/(2*Pi*n-2*sin(Pi*n)*cos(Pi*n)-Pi)*exp(-199.8594891
+*t)+66.01878835*cos(Pi*n)/(2*Pi*n-2*sin(Pi*n)*cos(Pi*n)-Pi)*exp(-298.5
+555331*t)-78.02220440*cos(Pi*n)/(2*Pi*n-2*sin(Pi*n)*cos(Pi*n)-Pi)*exp(
+-416.9907860*t)+90.02562045*cos(Pi*n)/(2*Pi*n-2*sin(Pi*n)*cos(Pi*n)-Pi
+)*exp(-555.1652476*t)-102.0290365*cos(Pi*n)/(2*Pi*n-2*sin(Pi*n)*cos(Pi
+*n)-Pi)*exp(-713.0789180*t)+114.0324525*cos(Pi*n)/(2*Pi*n-2*sin(Pi*n)*
+cos(Pi*n)-Pi)*exp(-890.7317972*t) to be plotted but found name n\n" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#>%$p11G-%/INTERFACE_PLOTG6$-%+AXESLABE
+LSG6$%\"tGQ!6\"-%%VIEWG6%;$\"\"!F3$\"$+&F3%(DEFAULTG-%+_ATTRIBUTEG6#/Q
+'sourceF-Q,mathdefaultF-" }}{PARA 7 "" 1 "" {TEXT -1 847 "Warning, exp
+ecting only range variable t in expression -4.546748508*cos(Pi*n)/(2*P
+i*n-2*sin(Pi*n)*cos(Pi*n)-Pi)*exp(-2.467401100*t)+13.64024552*cos(Pi*n
+)/(2*Pi*n-2*sin(Pi*n)*cos(Pi*n)-Pi)*exp(-22.20660990*t)-22.73374254*co
+s(Pi*n)/(2*Pi*n-2*sin(Pi*n)*cos(Pi*n)-Pi)*exp(-61.68502751*t)+31.82723
+956*cos(Pi*n)/(2*Pi*n-2*sin(Pi*n)*cos(Pi*n)-Pi)*exp(-120.9026539*t)-40
+.92073657*cos(Pi*n)/(2*Pi*n-2*sin(Pi*n)*cos(Pi*n)-Pi)*exp(-199.8594891
+*t)+50.01423360*cos(Pi*n)/(2*Pi*n-2*sin(Pi*n)*cos(Pi*n)-Pi)*exp(-298.5
+555331*t)-59.10773060*cos(Pi*n)/(2*Pi*n-2*sin(Pi*n)*cos(Pi*n)-Pi)*exp(
+-416.9907860*t)+68.20122761*cos(Pi*n)/(2*Pi*n-2*sin(Pi*n)*cos(Pi*n)-Pi
+)*exp(-555.1652476*t)-77.29472460*cos(Pi*n)/(2*Pi*n-2*sin(Pi*n)*cos(Pi
+*n)-Pi)*exp(-713.0789180*t)+86.38822162*cos(Pi*n)/(2*Pi*n-2*sin(Pi*n)*
+cos(Pi*n)-Pi)*exp(-890.7317972*t) to be plotted but found name n\n" }}
+{PARA 7 "" 1 "" {TEXT -1 847 "Warning, expecting only range variable t
+ in expression -3.031165672*cos(Pi*n)/(2*Pi*n-2*sin(Pi*n)*cos(Pi*n)-Pi
+)*exp(-2.467401100*t)+9.093497015*cos(Pi*n)/(2*Pi*n-2*sin(Pi*n)*cos(Pi
+*n)-Pi)*exp(-22.20660990*t)-15.15582836*cos(Pi*n)/(2*Pi*n-2*sin(Pi*n)*
+cos(Pi*n)-Pi)*exp(-61.68502751*t)+21.21815970*cos(Pi*n)/(2*Pi*n-2*sin(
+Pi*n)*cos(Pi*n)-Pi)*exp(-120.9026539*t)-27.28049104*cos(Pi*n)/(2*Pi*n-
+2*sin(Pi*n)*cos(Pi*n)-Pi)*exp(-199.8594891*t)+33.34282240*cos(Pi*n)/(2
+*Pi*n-2*sin(Pi*n)*cos(Pi*n)-Pi)*exp(-298.5555331*t)-39.40515374*cos(Pi
+*n)/(2*Pi*n-2*sin(Pi*n)*cos(Pi*n)-Pi)*exp(-416.9907860*t)+45.46748508*
+cos(Pi*n)/(2*Pi*n-2*sin(Pi*n)*cos(Pi*n)-Pi)*exp(-555.1652476*t)-51.529
+81640*cos(Pi*n)/(2*Pi*n-2*sin(Pi*n)*cos(Pi*n)-Pi)*exp(-713.0789180*t)+
+57.59214775*cos(Pi*n)/(2*Pi*n-2*sin(Pi*n)*cos(Pi*n)-Pi)*exp(-890.73179
+72*t) to be plotted but found name n\n" }}{PARA 7 "" 1 "" {TEXT -1 
+847 "Warning, expecting only range variable t in expression -1.5155828
+36*cos(Pi*n)/(2*Pi*n-2*sin(Pi*n)*cos(Pi*n)-Pi)*exp(-2.467401100*t)+4.5
+46748508*cos(Pi*n)/(2*Pi*n-2*sin(Pi*n)*cos(Pi*n)-Pi)*exp(-22.20660990*
+t)-7.577914180*cos(Pi*n)/(2*Pi*n-2*sin(Pi*n)*cos(Pi*n)-Pi)*exp(-61.685
+02751*t)+10.60907985*cos(Pi*n)/(2*Pi*n-2*sin(Pi*n)*cos(Pi*n)-Pi)*exp(-
+120.9026539*t)-13.64024552*cos(Pi*n)/(2*Pi*n-2*sin(Pi*n)*cos(Pi*n)-Pi)
+*exp(-199.8594891*t)+16.67141120*cos(Pi*n)/(2*Pi*n-2*sin(Pi*n)*cos(Pi*
+n)-Pi)*exp(-298.5555331*t)-19.70257687*cos(Pi*n)/(2*Pi*n-2*sin(Pi*n)*c
+os(Pi*n)-Pi)*exp(-416.9907860*t)+22.73374254*cos(Pi*n)/(2*Pi*n-2*sin(P
+i*n)*cos(Pi*n)-Pi)*exp(-555.1652476*t)-25.76490820*cos(Pi*n)/(2*Pi*n-2
+*sin(Pi*n)*cos(Pi*n)-Pi)*exp(-713.0789180*t)+28.79607388*cos(Pi*n)/(2*
+Pi*n-2*sin(Pi*n)*cos(Pi*n)-Pi)*exp(-890.7317972*t) to be plotted but f
+ound name n\n" }}{PARA 8 "" 1 "" {TEXT -1 26 "Plotting error, empty pl
+ot" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 0 "" }}}}{MARK "1 0 0" 132 }{VIEWOPTS 1 1 0 1 1 
+1803 1 1 1 1 }{PAGENUMBERS 0 1 2 33 1 1 }
