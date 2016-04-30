@@ -1,0 +1,890 @@
+{VERSION 6 0 "IBM INTEL NT" "6.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{CSTYLE "2D Math" -1 2 "Times" 0 1 0 0 0 0 0 0 2 0 0 0 0 
+0 0 1 }{CSTYLE "2D Output" 2 20 "" 0 1 0 0 255 1 0 0 0 0 0 0 0 0 0 1 }
+{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 
+2 2 1 1 1 1 }1 1 0 0 0 0 1 0 1 0 2 2 0 1 }{PSTYLE "Warning" -1 7 1 
+{CSTYLE "" -1 -1 "Courier" 1 10 0 0 255 1 2 2 2 2 2 1 1 1 3 1 }1 1 0 
+0 0 0 1 0 1 0 2 2 0 1 }{PSTYLE "Error" -1 8 1 {CSTYLE "" -1 -1 "Courie
+r" 1 10 255 0 255 1 2 2 2 2 2 1 1 1 3 1 }1 1 0 0 0 0 1 0 1 0 2 2 0 1 }
+{PSTYLE "Maple Output" -1 11 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 
+2 2 2 2 2 2 1 1 1 1 }3 3 0 0 0 0 1 0 1 0 2 2 0 1 }{PSTYLE "Maple Outpu
+t" -1 12 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 1 1 1 }
+1 3 0 0 0 0 1 0 1 0 2 2 0 1 }{PSTYLE "Maple Plot" -1 13 1 {CSTYLE "" 
+-1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 1 1 1 }3 1 0 0 0 0 1 0 1 0 2 
+2 0 1 }}
+{SECT 0 {EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 20 "restart;\nDigits:=15
+;" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%'DigitsG\"#:" }}}{EXCHG {PARA 
+0 "> " 0 "" {MPLTEXT 1 0 32 "eq1:=diff(y[1](t),t)=-y[1](t)^2;" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#>%$eq1G/-%%diffG6$-&%\"yG6#\"\"\"6#%\"
+tGF/,$*$)F)\"\"#F-!\"\"" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 39 "
+eq2:=diff(y[2](t),t)=y[1](t)^2-y[2](t);" }}{PARA 11 "" 1 "" {XPPMATH 
+20 "6#>%$eq2G/-%%diffG6$-&%\"yG6#\"\"#6#%\"tGF/,&*$)-&F+6#\"\"\"F.F-F6
+F6F)!\"\"" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 56 "sol:=dsolve(\{
+eq1,eq2,y[1](0)=1,y[2](0)=0\},type=numeric):" }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 7 "sol(1);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#7%/%\"
+tG$\"\"\"\"\"!/-&%\"yG6#F'6#F%$\"0JXT0+++&!#:/-&F,6#\"\"#F.$\"0yruhe)=
+GF1" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 33 "f:=Vector(2,[rhs(eq1
+),rhs(eq2)]);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"fG-%'RTABLEG6%\"+
+yHi\"Q%-%'MATRIXG6#7$7#,$*$)-&%\"yG6#\"\"\"6#%\"tG\"\"#F5!\"\"7#,&F/F5
+-&F36#F8F6F9&%'VectorG6#%'columnG" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 37 "f:=subs(y[1](t)=Y[1],y[2](t)=Y[2],f);" }}{PARA 11 "" 
+1 "" {XPPMATH 20 "6#>%\"fG-%'RTABLEG6%\"+#oB;Q%-%'MATRIXG6#7$7#,$*$)&%
+\"YG6#\"\"\"\"\"#F4!\"\"7#,&*$F0F4F4&F26#F5F6&%'VectorG6#%'columnG" }}
+}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 16 "F:=unapply(f,Y);" }}{PARA 
+11 "" 1 "" {XPPMATH 20 "6#>%\"FGf*6#%\"YG6\"6$%)operatorG%&arrowGF(-%'
+rtableG6(;\"\"\"\"\"#<$/F0,$*$)&9$6#F0F1F0!\"\"/F1,&*$F6F0F0&F86#F1F:/
+%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rec
+tangularG/%&orderG%.Fortran_orderGF(F(F(" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 9 "F([1,0]);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#-%'RTABLE
+G6%\"+YPi\"Q%-%'MATRIXG6#7$7#!\"\"7#\"\"\"&%'VectorG6#%'columnG" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 25 "YY[0]:=Vector(2,[1.0,0]);" }
+}{PARA 11 "" 1 "" {XPPMATH 20 "6#>&%#YYG6#\"\"!-%'RTABLEG6%\"+5Qi\"Q%-
+%'MATRIXG6#7$7#$\"#5!\"\"7#F'&%'VectorG6#%'columnG" }}}{EXCHG {PARA 0 
+"> " 0 "" {MPLTEXT 1 0 9 "h0:=1e-2;" }}{PARA 11 "" 1 "" {XPPMATH 20 "6
+#>%#h0G$\"\"\"!\"#" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 22 "Yh:=Y
+Y[0]+h0*F(YY[0]);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%#YhG-%'RTABLEG6
+%\"+yXi\"Q%-%'MATRIXG6#7$7#$\"0++++++!**!#:7#$\"0+++++++\"!#;&%'Vector
+G6#%'columnG" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 26 "Ymid:=YY[0]
++h0/2*F(YY[0]);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%%YmidG-%'RTABLEG6
+%\"+!4D;Q%-%'MATRIXG6#7$7#$\"0++++++&**!#:7#$\"0+++++++&!#<&%'VectorG6
+#%'columnG" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 23 "Yh2:=Ymid+h0/
+2*F(Ymid);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%$Yh2G-%'RTABLEG6%\"+Y`
+i\"Q%-%'MATRIXG6#7$7#$\"0+++v)\\+**!#:7#$\"0++++D^#**!#<&%'VectorG6#%'
+columnG" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 13 "Yerr:=Yh2-Yh;" }
+}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%%YerrG-%'RTABLEG6%\"+5ai\"Q%-%'MATR
+IXG6#7$7#$\"0q(******\\()\\!#>7#$!0.++++v[(F0&%'VectorG6#%'columnG" }}
+}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 26 "LinearAlgebra:-Norm(Yerr);
+" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#$\"3&)G++++]([(!#A" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 33 "Ord:=1;# Order of the base method" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%$OrdG\"\"\"" }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 31 "YR:=(2^(Ord)*Yh2-Yh)/(2^Ord-1);" }}{PARA 11 "
+" 1 "" {XPPMATH 20 "6#>%#YRG-%'RTABLEG6%\"+Idi\"Q%-%'MATRIXG6#7$7#$\"0
++++](*4!**!#:7#$\"0++++]-&)*!#<&%'VectorG6#%'columnG" }}}{EXCHG {PARA 
+0 "> " 0 "" {MPLTEXT 1 0 8 "sol(h0);" }}{PARA 11 "" 1 "" {XPPMATH 20 "
+6#7%/%\"tG$\"\"\"!\"#/-&%\"yG6#F'6#F%$\"0;Bx2!*4!**!#:/-&F,6#\"\"#F.$
+\"0h6))**)[^)*!#<" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 10 "YY[1]:
+=YR;" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>&%#YYG6#\"\"\"-%'RTABLEG6%\"+
+Idi\"Q%-%'MATRIXG6#7$7#$\"0+++](*4!**!#:7#$\"0++++]-&)*!#<&%'VectorG6#
+%'columnG" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 31 "Err:=LinearAlg
+ebra:-Norm(Yerr);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%$ErrG$\"3&)G+++
++]([(!#A" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 10 "tol:=1e-4;" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#>%$tolG$\"\"\"!\"%" }}}{EXCHG {PARA 0 
+"> " 0 "" {MPLTEXT 1 0 58 "#tol/hnew^Ord = Err/h0^Ord\nhnew:=0.9*h0*(t
+ol/Err)^(1/Ord);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%%hnewG$\"0;)*)QL
++-7!#;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 190 "singlestep:=proc
+(F,y0,h)\nlocal Yh, Yh2,Ymid,Ord;\nOrd:=1;\n#print(F);\nYh:=y0+h*F(y0)
+;\nYmid:=y0+h/2*F(y0);\nYh2:=Ymid+h/2*F(Ymid);\nLinearAlgebra:-Norm(Yh
+-Yh2),(2^Ord*Yh2-Yh)/(2^Ord-1);\nend proc;" }}{PARA 12 "" 1 "" 
+{XPPMATH 20 "6#>%+singlestepGf*6%%\"FG%#y0G%\"hG6&%#YhG%$Yh2G%%YmidG%$
+OrdG6\"F/C'>8'\"\"\">8$,&9%F3*&9&F3-9$6#F7F3F3>8&,&F7F3*&#F3\"\"#F3F8F
+3F3>8%,&F>F3*&FAF3*&F9F3-F;6#F>F3F3F36$-_%.LinearAlgebraG%%NormG6#,&F5
+F3FD!\"\"*&,&*&)FBF2F3FDF3F3F5FQF3,&FUF3F3FQFQF/F/F/" }}}{EXCHG {PARA 
+0 "> " 0 "" {MPLTEXT 1 0 23 "singlestep(F,YY[0],h0);" }}{PARA 11 "" 1 
+"" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"
+\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)a
+nythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rectangularG/%&or
+derG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6$$\"3&)G+
++++]([(!#A-%'RTABLEG6%\"+!p=;Q%-%'MATRIXG6#7$7#$\"0+++](*4!**!#:7#$\"0
+++++]-&)*!#<&%'VectorG6#%'columnG" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 24 "y0:=Vector(2,[1.0,0.0]);" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>%#y0G-%'RTABLEG6%\"+a(=;Q%-%'MATRIXG6#7$7#$\"#5!\"\"7#
+$\"\"!F3&%'VectorG6#%'columnG" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 347 "Eulerforward:=proc(f,y0,singlestep,tf,tol,h0)\nlocal F,h,YY,i,O
+rd,k,TT,z1,Err,hnew;\nOrd:=1;\nF:=unapply(f,Y);\nk:=0;\nYY[0]:=y0;TT[0
+]:=0;#counter for time\nz1:=singlestep(F,YY[0],h0);\n#print(z1);\nErr:
+=z1[1];\nk:=k+1;YY[k]:=z1[2];TT[k]:=TT[k-1]+h0;\nhnew:=0.9*h0*(tol/Err
+)^(1/Ord);\n#print(hnew);\nwhile TT[k]<tf do\nz1:=singlestep(F,YY[k],h
+new);\nErr:=z1[1];" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 201 "#print(Err);
+\nif Err<tol then\nk:=k+1;\nYY[k]:=z1[2];TT[k]:=TT[k-1]+hnew;\nhnew:=
+\n0.9*h0*(tol/Err)^(1/Ord);\nelse hnew:=hnew/2;orint(\"step rejection
+\");end;\nend;\nArray([seq([TT[j],YY[j]],j=0..k)]);\nend proc;" }}
+{PARA 12 "" 1 "" {XPPMATH 20 "6#>%-EulerforwardGf*6(%\"fG%#y0G%+single
+stepG%#tfG%$tolG%#h0G6,%\"FG%\"hG%#YYG%\"iG%$OrdG%\"kG%#TTG%#z1G%$ErrG
+%%hnewG6\"F8C/>8(\"\"\">8$-%(unapplyG6$9$%\"YG>8)\"\"!>&8&6#FF9%>&8*FJ
+FF>8+-9&6%F>FH9)>8,&FP6#F<>FE,&FEF<F<F<>&FI6#FE&FP6#\"\"#>&FNFgn,&&FN6
+#,&FEF<F<!\"\"F<FTF<>8-*($\"\"*FaoF<FTF<)*&9(F<FVFao*&F<F<F;FaoF<?(F8F
+<F<F82F\\o9'C%>FP-FR6%F>FfnFco>FVFW@%2FVFioC&>FEFZ>FfnFhn>F\\o,&F^oF<F
+coF<>Fco*(FeoF<FTF<FgoF<C$>Fco,$*&#F<FjnF<FcoF<F<-%&orintG6#Q/step~rej
+ectionF8-%&ArrayG6#7#-%$seqG6$7$&FN6#%\"jG&FIF^r/F_r;FFFEF8F8F8" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 48 "sol1:=Eulerforward(f,y0,sing
+lestep,1,1e-4,0.01);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$
+%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"
+\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#
+%'columnG/%(storageG%,rectangularG/%&orderG%.Fortran_orderGF&F&F&" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'
+rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/
+%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rec
+tangularG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 
+20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.
+,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(s
+ubtypeG&%'VectorG6#%'columnG/%(storageG%,rectangularG/%&orderG%.Fortra
+n_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)oper
+atorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&
+*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'colum
+nG/%(storageG%,rectangularG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 
+11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtable
+G6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)data
+typeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rectangul
+arG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#
+f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&
+9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(subtype
+G&%'VectorG6#%'columnG/%(storageG%,rectangularG/%&orderG%.Fortran_orde
+rGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%
+&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.
+F.&F66#F/F8/%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(s
+torageG%,rectangularG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 
+"" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"
+\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)a
+nythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rectangularG/%&or
+derG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"Y
+G6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/
+F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(subtypeG&%'Vect
+orG6#%'columnG/%(storageG%,rectangularG/%&orderG%.Fortran_orderGF&F&F&
+" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF
+&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F
+/F8/%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%
+,rectangularG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"
+\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)any
+thingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rectangularG/%&orde
+rG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6
+\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.
+!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(subtypeG&%'Vector
+G6#%'columnG/%(storageG%,rectangularG/%&orderG%.Fortran_orderGF&F&F&" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-
+%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F
+8/%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,r
+ectangularG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"
+\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)any
+thingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rectangularG/%&orde
+rG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6
+\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.
+!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(subtypeG&%'Vector
+G6#%'columnG/%(storageG%,rectangularG/%&orderG%.Fortran_orderGF&F&F&" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-
+%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F
+8/%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,r
+ectangularG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"
+\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)any
+thingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rectangularG/%&orde
+rG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6
+\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.
+!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(subtypeG&%'Vector
+G6#%'columnG/%(storageG%,rectangularG/%&orderG%.Fortran_orderGF&F&F&" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-
+%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F
+8/%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,r
+ectangularG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"
+\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)any
+thingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rectangularG/%&orde
+rG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6
+\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.
+!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(subtypeG&%'Vector
+G6#%'columnG/%(storageG%,rectangularG/%&orderG%.Fortran_orderGF&F&F&" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-
+%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F
+8/%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,r
+ectangularG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"
+\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)any
+thingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rectangularG/%&orde
+rG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6
+\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.
+!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(subtypeG&%'Vector
+G6#%'columnG/%(storageG%,rectangularG/%&orderG%.Fortran_orderGF&F&F&" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-
+%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F
+8/%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,r
+ectangularG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"
+\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)any
+thingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rectangularG/%&orde
+rG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6
+\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.
+!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(subtypeG&%'Vector
+G6#%'columnG/%(storageG%,rectangularG/%&orderG%.Fortran_orderGF&F&F&" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-
+%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F
+8/%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,r
+ectangularG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"
+\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)any
+thingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rectangularG/%&orde
+rG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6
+\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.
+!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(subtypeG&%'Vector
+G6#%'columnG/%(storageG%,rectangularG/%&orderG%.Fortran_orderGF&F&F&" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-
+%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F
+8/%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,r
+ectangularG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"
+\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)any
+thingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rectangularG/%&orde
+rG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6
+\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.
+!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(subtypeG&%'Vector
+G6#%'columnG/%(storageG%,rectangularG/%&orderG%.Fortran_orderGF&F&F&" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-
+%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F
+8/%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,r
+ectangularG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"
+\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)any
+thingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rectangularG/%&orde
+rG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6
+\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.
+!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(subtypeG&%'Vector
+G6#%'columnG/%(storageG%,rectangularG/%&orderG%.Fortran_orderGF&F&F&" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-
+%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F
+8/%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,r
+ectangularG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"
+\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)any
+thingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rectangularG/%&orde
+rG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6
+\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.
+!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(subtypeG&%'Vector
+G6#%'columnG/%(storageG%,rectangularG/%&orderG%.Fortran_orderGF&F&F&" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-
+%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F
+8/%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,r
+ectangularG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"
+\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)any
+thingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rectangularG/%&orde
+rG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6
+\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.
+!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(subtypeG&%'Vector
+G6#%'columnG/%(storageG%,rectangularG/%&orderG%.Fortran_orderGF&F&F&" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-
+%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F
+8/%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,r
+ectangularG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"
+\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)any
+thingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rectangularG/%&orde
+rG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6
+\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.
+!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(subtypeG&%'Vector
+G6#%'columnG/%(storageG%,rectangularG/%&orderG%.Fortran_orderGF&F&F&" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-
+%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F
+8/%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,r
+ectangularG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"
+\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)any
+thingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rectangularG/%&orde
+rG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6
+\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.
+!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(subtypeG&%'Vector
+G6#%'columnG/%(storageG%,rectangularG/%&orderG%.Fortran_orderGF&F&F&" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-
+%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F
+8/%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,r
+ectangularG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"
+\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)any
+thingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rectangularG/%&orde
+rG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6
+\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.
+!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(subtypeG&%'Vector
+G6#%'columnG/%(storageG%,rectangularG/%&orderG%.Fortran_orderGF&F&F&" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-
+%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F
+8/%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,r
+ectangularG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"
+\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)any
+thingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rectangularG/%&orde
+rG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6
+\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.
+!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(subtypeG&%'Vector
+G6#%'columnG/%(storageG%,rectangularG/%&orderG%.Fortran_orderGF&F&F&" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-
+%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F
+8/%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,r
+ectangularG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"
+\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)any
+thingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rectangularG/%&orde
+rG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6
+\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.
+!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(subtypeG&%'Vector
+G6#%'columnG/%(storageG%,rectangularG/%&orderG%.Fortran_orderGF&F&F&" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-
+%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F
+8/%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,r
+ectangularG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"
+\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)any
+thingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rectangularG/%&orde
+rG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6
+\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.
+!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(subtypeG&%'Vector
+G6#%'columnG/%(storageG%,rectangularG/%&orderG%.Fortran_orderGF&F&F&" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-
+%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F
+8/%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,r
+ectangularG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"
+\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)any
+thingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rectangularG/%&orde
+rG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6
+\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.
+!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(subtypeG&%'Vector
+G6#%'columnG/%(storageG%,rectangularG/%&orderG%.Fortran_orderGF&F&F&" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-
+%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F
+8/%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,r
+ectangularG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"
+\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)any
+thingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rectangularG/%&orde
+rG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6
+\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.
+!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(subtypeG&%'Vector
+G6#%'columnG/%(storageG%,rectangularG/%&orderG%.Fortran_orderGF&F&F&" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-
+%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F
+8/%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,r
+ectangularG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"
+\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)any
+thingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rectangularG/%&orde
+rG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6
+\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.
+!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(subtypeG&%'Vector
+G6#%'columnG/%(storageG%,rectangularG/%&orderG%.Fortran_orderGF&F&F&" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-
+%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F
+8/%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,r
+ectangularG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"
+\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)any
+thingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rectangularG/%&orde
+rG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6
+\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.
+!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(subtypeG&%'Vector
+G6#%'columnG/%(storageG%,rectangularG/%&orderG%.Fortran_orderGF&F&F&" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-
+%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F
+8/%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,r
+ectangularG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"
+\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)any
+thingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rectangularG/%&orde
+rG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6
+\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.
+!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(subtypeG&%'Vector
+G6#%'columnG/%(storageG%,rectangularG/%&orderG%.Fortran_orderGF&F&F&" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-
+%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F
+8/%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,r
+ectangularG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"
+\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)any
+thingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rectangularG/%&orde
+rG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6
+\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.
+!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(subtypeG&%'Vector
+G6#%'columnG/%(storageG%,rectangularG/%&orderG%.Fortran_orderGF&F&F&" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-
+%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F
+8/%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,r
+ectangularG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"
+\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)any
+thingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rectangularG/%&orde
+rG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6
+\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.
+!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(subtypeG&%'Vector
+G6#%'columnG/%(storageG%,rectangularG/%&orderG%.Fortran_orderGF&F&F&" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-
+%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F
+8/%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,r
+ectangularG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"
+\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)any
+thingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rectangularG/%&orde
+rG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6
+\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.
+!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(subtypeG&%'Vector
+G6#%'columnG/%(storageG%,rectangularG/%&orderG%.Fortran_orderGF&F&F&" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-
+%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F
+8/%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,r
+ectangularG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"
+\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)any
+thingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rectangularG/%&orde
+rG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6
+\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.
+!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(subtypeG&%'Vector
+G6#%'columnG/%(storageG%,rectangularG/%&orderG%.Fortran_orderGF&F&F&" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-
+%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F
+8/%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,r
+ectangularG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"
+\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)any
+thingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rectangularG/%&orde
+rG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6
+\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.
+!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(subtypeG&%'Vector
+G6#%'columnG/%(storageG%,rectangularG/%&orderG%.Fortran_orderGF&F&F&" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-
+%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F
+8/%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,r
+ectangularG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"
+\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)any
+thingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rectangularG/%&orde
+rG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6
+\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.
+!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(subtypeG&%'Vector
+G6#%'columnG/%(storageG%,rectangularG/%&orderG%.Fortran_orderGF&F&F&" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-
+%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F
+8/%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,r
+ectangularG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"
+\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)any
+thingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rectangularG/%&orde
+rG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6
+\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.
+!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(subtypeG&%'Vector
+G6#%'columnG/%(storageG%,rectangularG/%&orderG%.Fortran_orderGF&F&F&" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-
+%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F
+8/%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,r
+ectangularG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"
+\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)any
+thingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rectangularG/%&orde
+rG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6
+\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.
+!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(subtypeG&%'Vector
+G6#%'columnG/%(storageG%,rectangularG/%&orderG%.Fortran_orderGF&F&F&" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-
+%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F
+8/%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,r
+ectangularG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"
+\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)any
+thingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rectangularG/%&orde
+rG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6
+\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.
+!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(subtypeG&%'Vector
+G6#%'columnG/%(storageG%,rectangularG/%&orderG%.Fortran_orderGF&F&F&" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-
+%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F
+8/%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,r
+ectangularG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"
+\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)any
+thingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rectangularG/%&orde
+rG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6
+\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.
+!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(subtypeG&%'Vector
+G6#%'columnG/%(storageG%,rectangularG/%&orderG%.Fortran_orderGF&F&F&" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-
+%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F
+8/%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,r
+ectangularG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"
+\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)any
+thingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rectangularG/%&orde
+rG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6
+\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.
+!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(subtypeG&%'Vector
+G6#%'columnG/%(storageG%,rectangularG/%&orderG%.Fortran_orderGF&F&F&" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-
+%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F
+8/%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,r
+ectangularG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"
+\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)any
+thingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rectangularG/%&orde
+rG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6
+\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.
+!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(subtypeG&%'Vector
+G6#%'columnG/%(storageG%,rectangularG/%&orderG%.Fortran_orderGF&F&F&" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-
+%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F
+8/%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,r
+ectangularG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"
+\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)any
+thingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rectangularG/%&orde
+rG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6
+\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.
+!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(subtypeG&%'Vector
+G6#%'columnG/%(storageG%,rectangularG/%&orderG%.Fortran_orderGF&F&F&" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-
+%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F
+8/%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,r
+ectangularG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"
+\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)any
+thingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rectangularG/%&orde
+rG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6
+\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.
+!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(subtypeG&%'Vector
+G6#%'columnG/%(storageG%,rectangularG/%&orderG%.Fortran_orderGF&F&F&" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-
+%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F
+8/%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,r
+ectangularG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"
+\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)any
+thingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rectangularG/%&orde
+rG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6
+\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.
+!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(subtypeG&%'Vector
+G6#%'columnG/%(storageG%,rectangularG/%&orderG%.Fortran_orderGF&F&F&" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-
+%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F
+8/%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,r
+ectangularG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"
+\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)any
+thingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rectangularG/%&orde
+rG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6
+\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.
+!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(subtypeG&%'Vector
+G6#%'columnG/%(storageG%,rectangularG/%&orderG%.Fortran_orderGF&F&F&" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-
+%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F
+8/%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,r
+ectangularG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"
+\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)any
+thingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rectangularG/%&orde
+rG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%%sol1G-%
+'RTABLEG6+\"+=wKwV%)anythingG%&ArrayG%,rectangularG%.Fortran_orderG7\"
+\"\"#;\"\"\"\"#u;F0F." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 9 "sol
+1[74];" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#-%'RTABLEG6%\"+#oFjP%-%'VECT
+ORG6#7$$\"0hC'>xX>5!#9-F$6%\"+avKwV-%'MATRIXG6#7$7#$\"0=$>`R0_\\!#:7#$
+\"0(yK>C\">\"GF8&%'VectorG6#%'columnG%&ArrayG" }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 17 "t11:=sol1[74][1];" }}{PARA 11 "" 1 "" {XPPMATH 
+20 "6#>%$t11G$\"0hC'>xX>5!#9" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 9 "sol(t11);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#7%/%\"tG$\"0hC'>xX>5
+!#9/-&%\"yG6#\"\"\"6#F%$\"0q(zMW#=&\\!#:/-&F,6#\"\"#F/$\"0'>5#p[A\"GF2
+" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 60 "plot([seq([sol1[i][1],s
+ol1[i][2][1]],i=1..74)],style=point);" }}{PARA 13 "" 1 "" {GLPLOT2D 
+455 455 455 {PLOTDATA 2 "6&-%'CURVESG6$X0%)anythingG6\"6\"[gl'\"%!!!#_
+t\"eo\"#!!!!00000000000000003F847AE147AE147B3F9064EE0871EC0C3F992A7E91
+7EC7F83FA0FB03FDD204CC3FA577926B7066113FA9E349233EC3A73FAE8F3345AE713A
+3FB16CC2115351F53FB4093636EF6C2E3FB5D7868968EC263FB7C8E0B94016583FB97F
+65B9D095EB3FBBBFB26B48988F3FBE680A70BA117E3FC02E4AF990D2FF3FC11C35E4F6
+3DC53FC2292491897CF83FC3D6C227193C8C3FC52F745BABFB0B3FC644F07D29DAE53F
+C7FD89E05F4D273FC9637ECE2C63583FCA7CA8024D8D8B3FCC51E7E082971F3FCDAAFF
+EC226F9F3FCEF65C87C275093FD033FF0156AB4D3FD0CC99D64546163FD1B329102FB7
+6D3FD282585CEFC1643FD38C8C43720DC53FD43350DAAD2B4C3FD510CD5755E5793FD6
+12CA3C66EB0B3FD6D7C7724C59023FD787A43EBD6A193FD86B3148DFEA6D3FD982BBC1
+43DB963FDA42BF858E1D7F3FDB1723A8F25CAE3FDBCA048F3A013E3FDCCE92BA8F44B4
+3FDDCB3CB9C1E9643FDEE2F137DF71D53FDFD049E26B792D3FE09424412F6D993FE0E9
+216A5D43F53FE1A0584AFF5C643FE1F164EC8B63F03FE25EBA8EC50D473FE2D9F56775
+7D763FE3A29A103CFF6F3FE3F1481C479CE53FE4790615A492633FE5340B114FD2D83F
+E59AD1B10CDDF73FE64EC16DC2FA423FE6C80EC206B7D23FE754F3A128DD523FE82DCF
+5AE320183FE88D83F485FB613FE9109B6DB213973FE9A0A083AF112F3FEA9938FCDD2D
+4C3FEAF09FB6283C873FEBAF2E545754033FEC5443D5ED92883FED3DC0078B0E123FED
+B7D4AD4851363FEEA0F4DEFA9E143FEF240E1FFB51093FEFFC492BCAACE83FF04FB2E5
+D714393FF00000000000003FEFAEE5ABC0E38A3FEF7EEB7E60851D3FEF3B830FEEBD76
+3FEEF90C018338233FEEB65DA168C45C3FEE75C00F3499EF3FEE329D1BBBEFA43FEDF5
+F74C25970F3FEDAD6AC5ED053B3FED7C09708CB0CC3FED47A04B2C590A3FED1A03D0F9
+BF733FECDEE9571160193FEC9A55ABFB77C23FEC68AFC3BF78E73FEC3A1C05C7F3813F
+EC062C97B6B8B53FEBB4BE93CBC90C3FEB74BB888198073FEB4208CD1CEBF03FEAF306
+441327EF3FEAB4232C8D747A3FEA8389FF79AF7F3FEA33F4C09491BD3FE9FA9B737335
+AA3FE9C4749B7989073FE98914E1F26E7C3FE958DAB71FC18C3FE9115472B8AB9B3FE8
+D2632CB7654F3FE8834F0A4DD1CB3FE852C2816626DE3FE8136EDC627CE33FE7CB46D8
+2EEAF13FE7954E5B967FE73FE765ECBB894B7D3FE729B637EA91A53FE6E161917DCE9C
+3FE6B0B560E4855B3FE67BCE141E91713FE64FFD7217CE1F3FE6115A313504933FE5D5
+E8D01A1E663FE5958C46595F7E3FE560153D7771643FE5146939E7B9713FE4EFC853BB
+57EB3FE4A27F588F2E423FE48102BCBC5AC03FE454816AC39B823FE4233DB09434673F
+E3D500888306743FE3B6F61FB62A4F3FE383F6BD1744103FE33F5F035949803FE31A77
+EAA149E33FE2DB2DFCF7BE9C3FE2B16D780022073FE281D4A0D6E11F3FE23A668D119C
+B83FE21B8D7BA180413FE1F1F4C77537453FE1C51C326682343FE179BCA8E023A13FE1
+5FD285450EA73FE1285ADE7F96D53FE0F9683F2566D33FE0B8B352C60C363FE0979FF6
+68FCAF3FE059DEBC72428B3FE037EBB512DA4D3FE0011E15ABB1863FDFB171F86CC014
+-%'COLOURG6'%$RGBG$\")C)eq%!\")$\"\"!F2$\")h>!\\&!\"*-%+_ATTRIBUTEG6#/
+Q'sourceF)Q,mathdefaultF)-%&STYLEG6#%&POINTG-%+AXESLABELSG6$Q!F)FC-%%V
+IEWG6$%(DEFAULTGFG" 1 5 0 1 10 0 2 9 1 4 2 1.000000 45.000000 
+45.000000 0 0 "Curve 1" }}}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 585 
+"Eulerforward:=proc(f,y0,singlestep,tf,tol,h0)\nlocal F,h,YY,i,Ord,k,T
+T,z1,Err,hnew;\nOrd:=1;\nF:=unapply(f,Y);\nk:=0;\nYY[0]:=y0;TT[0]:=0;#
+counter for time\nz1:=singlestep(F,YY[0],h0);\n#print(z1);\nErr:=z1[1]
+;\nk:=k+1;YY[k]:=z1[2];TT[k]:=TT[k-1]+h0;\nhnew:=0.9*h0*(tol/Err)^(1/O
+rd);\n#print(hnew);\nwhile TT[k]<tf do\nz1:=singlestep(F,YY[k],hnew);
+\nErr:=z1[1];\n#print(Err);\nif Err<tol then\nk:=k+1;\nYY[k]:=z1[2];TT
+[k]:=TT[k-1]+hnew;\nhnew:=\nmin(tf-TT[k],0.9*h0*(tol/Err)^(1/Ord));\n#
+print(hnew);\nelse hnew:=hnew/2;#print(TT[k],\"step rejection\");\nend
+;\nend;\nArray([seq([TT[j],YY[j]],j=0..k)]);\nend proc;" }}{PARA 12 "
+" 1 "" {XPPMATH 20 "6#>%-EulerforwardGf*6(%\"fG%#y0G%+singlestepG%#tfG
+%$tolG%#h0G6,%\"FG%\"hG%#YYG%\"iG%$OrdG%\"kG%#TTG%#z1G%$ErrG%%hnewG6\"
+F8C/>8(\"\"\">8$-%(unapplyG6$9$%\"YG>8)\"\"!>&8&6#FF9%>&8*FJFF>8+-9&6%
+F>FH9)>8,&FP6#F<>FE,&FEF<F<F<>&FI6#FE&FP6#\"\"#>&FNFgn,&&FN6#,&FEF<F<!
+\"\"F<FTF<>8-*($\"\"*FaoF<FTF<)*&9(F<FVFao*&F<F<F;FaoF<?(F8F<F<F82F\\o
+9'C%>FP-FR6%F>FfnFco>FVFW@%2FVFioC&>FEFZ>FfnFhn>F\\o,&F^oF<FcoF<>Fco-%
+$minG6$,&F]pF<F\\oFao*(FeoF<FTF<FgoF<>Fco,$*&#F<FjnF<FcoF<F<-%&ArrayG6
+#7#-%$seqG6$7$&FN6#%\"jG&FIF]r/F^r;FFFEF8F8F8" }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 72 "t11:=time():sol2:=Eulerforward(f,y0,singlestep,1
+,1e-4,0.01);time()\n-t11;" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG
+6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F
+.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(subtypeG&%'Vecto
+rG6#%'columnG/%(storageG%,rectangularG/%&orderG%.Fortran_orderGF&F&F&
+" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF
+&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F
+/F8/%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%
+,rectangularG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"
+\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)any
+thingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rectangularG/%&orde
+rG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6
+\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.
+!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(subtypeG&%'Vector
+G6#%'columnG/%(storageG%,rectangularG/%&orderG%.Fortran_orderGF&F&F&" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-
+%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F
+8/%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,r
+ectangularG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"
+\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)any
+thingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rectangularG/%&orde
+rG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6
+\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.
+!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(subtypeG&%'Vector
+G6#%'columnG/%(storageG%,rectangularG/%&orderG%.Fortran_orderGF&F&F&" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-
+%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F
+8/%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,r
+ectangularG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"
+\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)any
+thingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rectangularG/%&orde
+rG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6
+\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.
+!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(subtypeG&%'Vector
+G6#%'columnG/%(storageG%,rectangularG/%&orderG%.Fortran_orderGF&F&F&" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-
+%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F
+8/%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,r
+ectangularG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"
+\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)any
+thingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rectangularG/%&orde
+rG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6
+\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.
+!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(subtypeG&%'Vector
+G6#%'columnG/%(storageG%,rectangularG/%&orderG%.Fortran_orderGF&F&F&" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-
+%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F
+8/%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,r
+ectangularG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"
+\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)any
+thingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rectangularG/%&orde
+rG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6
+\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.
+!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(subtypeG&%'Vector
+G6#%'columnG/%(storageG%,rectangularG/%&orderG%.Fortran_orderGF&F&F&" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-
+%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F
+8/%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,r
+ectangularG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"
+\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)any
+thingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rectangularG/%&orde
+rG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6
+\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.
+!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(subtypeG&%'Vector
+G6#%'columnG/%(storageG%,rectangularG/%&orderG%.Fortran_orderGF&F&F&" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-
+%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F
+8/%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,r
+ectangularG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"
+\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)any
+thingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rectangularG/%&orde
+rG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6
+\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.
+!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(subtypeG&%'Vector
+G6#%'columnG/%(storageG%,rectangularG/%&orderG%.Fortran_orderGF&F&F&" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-
+%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F
+8/%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,r
+ectangularG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"
+\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)any
+thingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rectangularG/%&orde
+rG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6
+\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.
+!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(subtypeG&%'Vector
+G6#%'columnG/%(storageG%,rectangularG/%&orderG%.Fortran_orderGF&F&F&" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-
+%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F
+8/%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,r
+ectangularG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"
+\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)any
+thingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rectangularG/%&orde
+rG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6
+\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.
+!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(subtypeG&%'Vector
+G6#%'columnG/%(storageG%,rectangularG/%&orderG%.Fortran_orderGF&F&F&" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-
+%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F
+8/%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,r
+ectangularG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"
+\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)any
+thingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rectangularG/%&orde
+rG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6
+\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.
+!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(subtypeG&%'Vector
+G6#%'columnG/%(storageG%,rectangularG/%&orderG%.Fortran_orderGF&F&F&" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-
+%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F
+8/%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,r
+ectangularG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"
+\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)any
+thingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rectangularG/%&orde
+rG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6
+\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.
+!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(subtypeG&%'Vector
+G6#%'columnG/%(storageG%,rectangularG/%&orderG%.Fortran_orderGF&F&F&" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-
+%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F
+8/%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,r
+ectangularG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"
+\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)any
+thingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rectangularG/%&orde
+rG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6
+\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.
+!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(subtypeG&%'Vector
+G6#%'columnG/%(storageG%,rectangularG/%&orderG%.Fortran_orderGF&F&F&" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-
+%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F
+8/%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,r
+ectangularG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"
+\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)any
+thingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rectangularG/%&orde
+rG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6
+\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.
+!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(subtypeG&%'Vector
+G6#%'columnG/%(storageG%,rectangularG/%&orderG%.Fortran_orderGF&F&F&" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-
+%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F
+8/%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,r
+ectangularG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"
+\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)any
+thingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rectangularG/%&orde
+rG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6
+\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.
+!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(subtypeG&%'Vector
+G6#%'columnG/%(storageG%,rectangularG/%&orderG%.Fortran_orderGF&F&F&" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-
+%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F
+8/%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,r
+ectangularG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"
+\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)any
+thingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rectangularG/%&orde
+rG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6
+\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.
+!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(subtypeG&%'Vector
+G6#%'columnG/%(storageG%,rectangularG/%&orderG%.Fortran_orderGF&F&F&" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-
+%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F
+8/%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,r
+ectangularG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"
+\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)any
+thingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rectangularG/%&orde
+rG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6
+\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.
+!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(subtypeG&%'Vector
+G6#%'columnG/%(storageG%,rectangularG/%&orderG%.Fortran_orderGF&F&F&" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-
+%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F
+8/%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,r
+ectangularG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"
+\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)any
+thingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rectangularG/%&orde
+rG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6
+\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.
+!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(subtypeG&%'Vector
+G6#%'columnG/%(storageG%,rectangularG/%&orderG%.Fortran_orderGF&F&F&" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-
+%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F
+8/%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,r
+ectangularG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"
+\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)any
+thingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rectangularG/%&orde
+rG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6
+\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.
+!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(subtypeG&%'Vector
+G6#%'columnG/%(storageG%,rectangularG/%&orderG%.Fortran_orderGF&F&F&" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-
+%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F
+8/%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,r
+ectangularG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"
+\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)any
+thingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rectangularG/%&orde
+rG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6
+\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.
+!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(subtypeG&%'Vector
+G6#%'columnG/%(storageG%,rectangularG/%&orderG%.Fortran_orderGF&F&F&" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-
+%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F
+8/%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,r
+ectangularG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"
+\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)any
+thingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rectangularG/%&orde
+rG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6
+\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.
+!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(subtypeG&%'Vector
+G6#%'columnG/%(storageG%,rectangularG/%&orderG%.Fortran_orderGF&F&F&" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-
+%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F
+8/%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,r
+ectangularG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"
+\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)any
+thingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rectangularG/%&orde
+rG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6
+\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.
+!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(subtypeG&%'Vector
+G6#%'columnG/%(storageG%,rectangularG/%&orderG%.Fortran_orderGF&F&F&" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-
+%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F
+8/%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,r
+ectangularG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"
+\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)any
+thingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,rectangularG/%&orde
+rG%.Fortran_orderGF&F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6
+\"6$%)operatorG%&arrowGF&-%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.
+!\"\"/F/,&*$F4F.F.&F66#F/F8/%)datatypeG%)anythingG/%(subtypeG&%'Vector
+G6#%'columnG/%(storageG%,rectangularG/%&orderG%.Fortran_orderGF&F&F&" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#f*6#%\"YG6\"6$%)operatorG%&arrowGF&-
+%'rtableG6(;\"\"\"\"\"#<$/F.,$*$)&9$6#F.F/F.!\"\"/F/,&*$F4F.F.&F66#F/F
+8/%)datatypeG%)anythingG/%(subtypeG&%'VectorG6#%'columnG/%(storageG%,r
+ectangularG/%&orderG%.Fortran_orderGF&F&F&" }}{PARA 8 "" 1 "" {TEXT 
+-1 66 "Error, (in IsWorksheetInterface) invalid arguments for searchte
+xt\n" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#$\"#Z!\"$" }}{PARA 7 "" 1 "" 
+{TEXT -1

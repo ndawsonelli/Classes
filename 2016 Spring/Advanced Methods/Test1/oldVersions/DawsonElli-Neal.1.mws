@@ -1,0 +1,59 @@
+{VERSION 6 0 "IBM INTEL NT" "6.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{CSTYLE "2D Math" -1 2 "Times" 0 1 0 0 0 0 0 0 2 0 0 0 0 
+0 0 1 }{CSTYLE "2D Output" 2 20 "" 0 1 0 0 255 1 0 0 0 0 0 0 0 0 0 1 }
+{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 }0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE "Maple Output" 0 11 1 
+{CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 }3 3 0 -1 -1 -1 0 
+0 0 0 0 0 -1 0 }{PSTYLE "" 11 12 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 }1 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }}
+{SECT 0 {EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 183 "###################
+## P3 #################\nmakeJac:=proc(f)\nlocal N,jac;\nN:=LinearAlge
+bra:-Dimension(f);\njac:=VectorCalculus:-Jacobian(f,[seq(y[i],i=1..N)]
+);\nunapply(jac,y);\nend proc;" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 461 "
+Newton:=proc(f,y0,makeJac,tol,maxiter)\n#global\nlocal N,dy,Jac,F,yold
+,ynew,Err,iter;\nN:=LinearAlgebra:-Dimension(f);\nF:=unapply(f,y);\nJa
+c:=makeJac(f);\nyold:=y0;\ndy:=LinearAlgebra:-LinearSolve(-Jac(yold),F
+(yold));\nynew:=yold+dy;\nyold:=ynew;\nErr:=10;\niter:=1;\nwhile Err>t
+ol and iter < maxiter do\niter:=iter+1;\ndy:=LinearAlgebra:-LinearSolv
+e(-Jac(yold),F(yold));\nynew:=yold+dy;\nErr:=LinearAlgebra:-Norm(yold-
+ynew);\nyold:=ynew;\nend;\n#[Err,ynew,iter];\nynew;\nend proc;" }}
+{PARA 12 "" 1 "" {XPPMATH 20 "6#>%(makeJacGf*6#%\"fG6$%\"NG%$jacG6\"F+
+C%>8$-_%.LinearAlgebraG%*DimensionG6#9$>8%-_%/VectorCalculusG%)Jacobia
+nG6$F47#-%$seqG6$&%\"yG6#%\"iG/FC;\"\"\"F.-%(unapplyG6$F6FAF+F+F+" }}
+{PARA 12 "" 1 "" {XPPMATH 20 "6#>%'NewtonGf*6'%\"fG%#y0G%(makeJacG%$to
+lG%(maxiterG6*%\"NG%#dyG%$JacG%\"FG%%yoldG%%ynewG%$ErrG%%iterG6\"F5C->
+8$-_%.LinearAlgebraG%*DimensionG6#9$>8'-%(unapplyG6$F>%\"yG>8&-9&F=>8(
+9%>8%-_F;%,LinearSolveG6$,$-FF6#FJ!\"\"-F@FT>8),&FJ\"\"\"FMFZ>FJFX>8*
+\"#5>8+FZ?(F5FZFZF5329'Fgn2Fjn9(C'>Fjn,&FjnFZFZFZ>FMFN>FXFY>Fgn-_F;%%N
+ormG6#,&FJFZFXFU>FJFXFXF5F5F5" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 157 "eq1:=y[1]^2+y[2]^2+y[1]*y[2]-3;\neq2:=y[2]*y[2]+2*y[2]^2-2*(y[1
+]+y[2])-2;\neqns:=Vector(2,[eq1,eq2]);\ny0:=Vector(2,[1.0,1.0]);\nNewt
+on(eqns,y0,makeJac,1e-6,50);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%$eq1
+G,**$)&%\"yG6#\"\"\"\"\"#F+F+*&F(F+&F)6#F,F+F+*$)F.F,F+F+\"\"$!\"\"" }
+}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%$eq2G,**&\"\"$\"\"\")&%\"yG6#\"\"#F
+-F(F(*&F-F(&F+6#F(F(!\"\"*&F-F(F*F(F1F-F1" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>%%eqnsG-%'RTABLEG6%\"+arl9X-%'MATRIXG6#7$7#,**$)&%\"yG
+6#\"\"\"\"\"#F4F4*&F1F4&F26#F5F4F4*$)F7F5F4F4\"\"$!\"\"7#,**&F;F4F:F4F
+4*&F5F4F1F4F<*&F5F4F7F4F<F5F<&%'VectorG6#%'columnG" }}{PARA 11 "" 1 "
+" {XPPMATH 20 "6#>%#y0G-%'RTABLEG6%\"+Ytl9X-%'MATRIXG6#7$7#$\"#5!\"\"F
+-&%'VectorG6#%'columnG" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#-%'RTABLEG6%
+\"+AJl9X-%'MATRIXG6#7$7#$\"0\\VVW:%y`!#:7#$\"0&=Bp_K*R\"!#9&%'VectorG6
+#%'columnG" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}}{MARK "2
+ 0 0" 0 }{VIEWOPTS 1 1 0 1 1 1803 1 1 1 1 }{PAGENUMBERS 0 1 2 33 1 1 }
+{RTABLE_HANDLES 4514657154 4514657346 4514653122 }{RTABLE 
+M7R0
+I7RTABLE_SAVE/4514657154X*%)anythingG6"F%[gl!#%!!!"#"#z+6$&%"yG6#"""&F)6#""#[[[
+[[_[[[[sF+\[[[[][[[[sF+][[[[[[[[[sF+!!"$z+F'][[[[[[[[[s""$[[[[[][[[[o!"#\[[[[[[
+[[[oF2!F2F%
+}
+{RTABLE 
+M7R0
+I7RTABLE_SAVE/4514657346X*%)anythingG6"F%[gl!#%!!!"#"#$"#5!""F&F%
+}
+{RTABLE 
+M7R0
+I7RTABLE_SAVE/4514653122X*%)anythingG6"F%[gl'#%!!!"#"#3FE135FF7878D2333FF663A2E
+4BD134CF%
+}
+

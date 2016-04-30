@@ -1,0 +1,1 @@
+The purpose of this repository is to store / backup all of my homeworks and allow for practicing version control across multiple machines using a moderately unstable coding language.

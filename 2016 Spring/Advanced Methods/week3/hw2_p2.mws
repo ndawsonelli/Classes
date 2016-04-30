@@ -1,0 +1,40 @@
+{VERSION 6 0 "IBM INTEL NT" "6.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{CSTYLE "2D Math" -1 2 "Times" 0 1 0 0 0 0 0 0 2 0 0 0 0 
+0 0 1 }{CSTYLE "2D Output" 2 20 "" 0 1 0 0 255 1 0 0 0 0 0 0 0 0 0 1 }
+{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 
+2 2 1 1 1 1 }1 1 0 0 0 0 1 0 1 0 2 2 0 1 }{PSTYLE "Text Output" -1 2 
+1 {CSTYLE "" -1 -1 "Courier" 1 10 0 0 255 1 0 0 0 0 0 1 3 0 3 0 }1 0 
+0 -1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE "Warning" 2 7 1 {CSTYLE "" -1 -1 
+"" 0 1 0 0 255 1 0 0 0 0 0 0 1 0 0 0 }0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 
+}{PSTYLE "Maple Output" -1 11 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 
+2 2 2 2 2 2 1 1 1 1 }3 3 0 0 0 0 1 0 1 0 2 2 0 1 }{PSTYLE "Maple Outpu
+t" -1 12 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 1 1 1 }
+1 3 0 0 0 0 1 0 1 0 2 2 0 1 }}
+{SECT 0 {EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 140 "makeJac:=proc(f)\nl
+ocal N,jac;\nN:=LinearAlgebra:-Dimension(f);\njac:=VectorCalculus:-Jac
+obian(f,[seq(y[i],i=1..N)]);\nunapply(jac,y);\nend proc;" }}{PARA 11 "
+" 1 "" {XPPMATH 20 "6#>%(makeJacGf*6#%\"fG6$%\"NG%$jacG6\"F+C%>8$-_%.L
+inearAlgebraG%*DimensionG6#9$>8%-_%/VectorCalculusG%)JacobianG6$F47#-%
+$seqG6$&%\"yG6#%\"iG/FC;\"\"\"F.-%(unapplyG6$F6FAF+F+F+" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 427 "Newton:=proc(f,y0,makeJac,tol,maxi
+ter)\n#global\nlocal N,dy,Jac,F,yold,ynew,Err,iter;\nN:=LinearAlgebra:
+-Dimension(f);\nF:=unapply(f,y);\nJac:=makeJac(f);\nyold:=y0;\ndy:=Lin
+earAlgebra:-LinearSolve(-Jac(yold),F(yold));\nynew:=yold+dy;\nyold:=yn
+ew;\nErr:=10;\niter:=1;\nwhile Err>tol and iter < maxiter do\niter:=it
+er+1;\ndy:=LinearAlgebra:-LinearSolve(-Jac(yold),F(yold));\nynew:=yold
++dy;\nErr:=LinearAlgebra:-Norm(yold-ynew);\nyold:=ynew;\nend;" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 33 "#[Err,ynew,iter];\nynew;\nend proc;
+" }}{PARA 12 "" 1 "" {XPPMATH 20 "6#>%'NewtonGf*6'%\"fG%#y0G%(makeJacG
+%$tolG%(maxiterG6*%\"NG%#dyG%$JacG%\"FG%%yoldG%%ynewG%$ErrG%%iterG6\"F
+5C->8$-_%.LinearAlgebraG%*DimensionG6#9$>8'-%(unapplyG6$F>%\"yG>8&-9&F
+=>8(9%>8%-_F;%,LinearSolveG6$,$-FF6#FJ!\"\"-F@FT>8),&FJ\"\"\"FMFZ>FJFX
+>8*\"#5>8+FZ?(F5FZFZF5329'Fgn2Fjn9(C'>Fjn,&FjnFZFZFZ>FMFN>FXFY>Fgn-_F;
+%%NormG6#,&FJFZFXFU>FJFXFXF5F5F5" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 363 "y00:=Vector(2,[1.0,0.0]);\neq1:=diff(y[1](t),t)=-100
+0*y[1]^2:\neq2:=diff(y[2](t),t)=1000*y[1]^2-y[2];\nf:=Vector(2,[rhs(eq
+1),rhs(eq2)]);\nF:=unapply(h*f+y0-Vector(LinearAlgebra:-Dimension(f),[
+seq(y[i],i=1..LinearAlgebra:-Dimension(f))]),y0,h);\nF(y00,0.1);\n\nma
+keJac(f);\n\nyy[0]=y00;\nyy[1]:=Newton(F(y00,0.1),y00,makeJac,1e-6,50)
+;\nNewton(F(y00,0.1),y00,makeJac,1e-6,50);" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>%$y00G-%'RTABLEG6%+ffi]fy%$catGG\"\"!
